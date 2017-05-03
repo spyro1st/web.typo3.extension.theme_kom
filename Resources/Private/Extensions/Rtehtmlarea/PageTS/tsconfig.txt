@@ -1,0 +1,81 @@
+RTE.classes >
+RTE.classes {
+	# Bootrap
+	## Typography
+	### Headings
+
+	align-center {
+		name = LLL:EXT:theme_kom/Resources/Private/Extensions/Rtehtmlarea/Language/locallang.xlf:rte.align-center_label
+		value = text-align: center;
+	}
+
+	align-justify {
+		name = LLL:EXT:theme_kom/Resources/Private/Extensions/Rtehtmlarea/Language/locallang.xlf:rte.align-justify_label
+		value = text-align: justify;
+	}
+
+	align-left {
+		name = LLL:EXT:theme_kom/Resources/Private/Extensions/Rtehtmlarea/Language/locallang.xlf:rte.align-left_label
+		value = text-align: justify;
+	}
+
+	align-right {
+		name = LLL:EXT:theme_kom/Resources/Private/Extensions/Rtehtmlarea/Language/locallang.xlf:rte.align-right_label
+		value = text-align: justify;
+	}
+}
+
+RTE.default {
+	# BE Style File
+	contentCSS = typo3conf/ext/theme_kom/Resources/Public/Stylesheets/Backend.css
+
+	# Show buttons
+	## wildcard is *
+	## To display some buttons, such as small font, the option "Additional inline elements" hav to be activated in the extension configuration.
+#	showButtons := addToList(acronym, user, small, big, deletedtext, showmicrodata, editelement)
+	#showButtons = *
+	showButtons := addToList(user)
+	showButtons := addToList(insertsofthyphen)
+	showButtons := addToList(line)
+
+	hideButtons := addToList(table)
+
+	# list allowed classes (must also be defined in the css-file)
+	proc.allowedClasses >
+	proc.allowedClasses = external-link, internal-link, download, mail, default-link
+	proc.allowedClasses := addToList(list-styled, list-checked, align-center, text-justify)
+
+	# A class name to be assigned to the blocks whenever the item is applied to selected text.
+	buttons.blockstyle.tags >
+	buttons.blockstyle.tags.div.allowedClasses := addToList(align-center, text-justify)
+	buttons.blockstyle.tags.p.allowedClasses := addToList(align-center, text-justify)
+	buttons.blockstyle.tags.table.allowedClasses := addToList()
+	buttons.blockstyle.tags.blockquote.allowedClasses := addToList(align-center)
+	buttons.blockstyle.tags.ul.allowedClasses := addToList(list-styled, list-checked)
+	buttons.blockstyle.tags.ul.allowedClasses := removeFromList(component-items, action-items)
+
+	## for the textstyle
+	buttons.textstyle.tags.span.allowedClasses := removeFromList(name-of-person, detail)
+	buttons.textstyle.tags.acronym.allowedClasses := addToList()
+
+	##
+	## override: Hide infrequently used block types in the block formatting selector
+	buttons.formatblock.removeItems = pre,address,article,aside,nav,container,header,footer,section,h1,h4,h5,h6
+}
+
+# Diese Zeile übernimmt die geänderte RTE-Konfiguration für den Editor, wenn dieser im Frontend verwendet wird.
+RTE.default.FE < RTE.default
+
+RTE.config.tt_content.header {
+	hideButtons := addToList(table,link,blockstyle,subscript,superscript,italic,orderedlist,unorderedlist,indent,outdent,reduce,symbol,redo,undo,formatblock,textmode,findreplace,insertcharacter)
+
+	removeTags = center, font, o:p, sdfield, strike, u, p, i, div, blockquote, h1, h2, h3, h4, h5, h6
+	removeTagsAndContents = link, meta, script, style, title
+
+	dontConvBRtoParagraph = 1
+	preserveDIVSections = 1
+
+	buttons.textstyle.tags.span.allowedClasses >
+	buttons.textstyle.tags.span.allowedClasses := addToList(lowlight)
+}
+RTE.config.tt_content.subheader < RTE.config.tt_content.header

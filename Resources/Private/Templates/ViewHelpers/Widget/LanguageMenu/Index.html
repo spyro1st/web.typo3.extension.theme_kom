@@ -1,0 +1,116 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+<div class="dropdown hidden-sm-down">
+	<f:for each="{menu}" as="entry" iteration="itemIteration">
+		<f:if condition="{entry.active}">
+			<a class="dropdown-toggle" href="#" data-toggle="dropdown"
+				 title="{f:translate(key: 'LLL:EXT:theme_kom/Resources/Private/Language/locallang.xlf:menu.language.{entry.class}')}">
+				<span>
+					{f:translate(key: 'LLL:EXT:theme_kom/Resources/Private/Language/locallang.xlf:menu.language.{entry.class}')}
+				</span>
+			</a>
+		</f:if>
+	</f:for>
+	<div class="dropdown-menu menu-language__wrapper">
+		<f:for each="{menu}" as="entry" iteration="itemIteration">
+			<f:if condition="{entry.active}">
+				<f:then></f:then>
+				<f:else>
+					<!-- Page translation available?! -->
+					<f:if condition="{entry.hasTranslation}">
+						<f:then>
+							<!-- Translated! -->
+							<f:link.page addQueryString="1"
+													 additionalParams="{L: entry.L}"
+													 class="dropdown-item {entry.class} menu-language__dropdown-link"
+													 title="{f:translate(key: 'LLL:EXT:theme_kom/Resources/Private/Language/locallang.xlf:menu.language.{entry.class}')}"
+													 argumentsToBeExcludedFromQueryString="{0: 'id'}">
+								<f:image
+									src="EXT:core/Resources/Public/Icons/Flags/SVG/{v:format.case(string: '{entry.flag}', case: 'upper')}.svg"
+									class="menu-language__dropdown-flag"
+									title="{f:translate(key: 'LLL:EXT:theme_kom/Resources/Private/Language/locallang.xlf:menu.language.{entry.class}')}"
+									alt="{f:translate(key: 'LLL:EXT:theme_kom/Resources/Private/Language/locallang.xlf:menu.language.{entry.class}')}"
+									maxWidth="20"/>
+								<span>
+										<f:translate
+											key="LLL:EXT:theme_kom/Resources/Private/Language/locallang.xlf:menu.language.{entry.class}"/>
+									</span>
+							</f:link.page>
+						</f:then>
+						<f:else>
+							<!-- Not translated! -->
+							<a class="dropdown-item {entry.class} noTranslation" href="#">
+								<span>
+									<f:translate
+										key="LLL:EXT:theme_kom/Resources/Private/Language/locallang.xlf:menu.language.{entry.class}"/>
+								</span>
+								<f:image
+									src="EXT:core/Resources/Public/Icons/Flags/SVG/{v:format.case(string: '{entry.flag}', case: 'upper')}.svg"
+									class="menu-language__dropdown-flag"
+									title="{f:translate(key: 'LLL:EXT:theme_kom/Resources/Private/Language/locallang.xlf:menu.language.{entry.class}')}"
+									alt="{f:translate(key: 'LLL:EXT:theme_kom/Resources/Private/Language/locallang.xlf:menu.language.{entry.class}')}"
+									maxWidth="20"/>
+							</a>
+						</f:else>
+					</f:if>
+				</f:else>
+			</f:if>
+		</f:for>
+	</div>
+</div>
+
+<span class="dropdown d-inline-block hidden-md-up">
+	<f:for each="{menu}" as="entry" iteration="itemIteration">
+		<f:if condition="{entry.active}">
+			<a class="btn btn-default" href="#" data-toggle="dropdown"
+				 title="{f:translate(key: 'LLL:EXT:theme_kom/Resources/Private/Language/locallang.xlf:menu.language.{entry.class}')}">
+				<i class="fi flaticon-global"></i>
+			</a>
+		</f:if>
+	</f:for>
+	<div class="dropdown-menu dropdown-menu-right menu-language__wrapper-mobile">
+		<f:for each="{menu}" as="entry" iteration="itemIteration">
+				<f:if condition="{entry.active}">
+					<f:then></f:then>
+					<f:else>
+						<!-- Page translation available?! -->
+						<f:if condition="{entry.hasTranslation}">
+							<f:then>
+								<!-- Translated! -->
+								<f:link.page addQueryString="1"
+														 additionalParams="{L: entry.L}"
+														 class="dropdown-item {entry.class} menu-language__dropdown-link"
+														 title="{f:translate(key: 'LLL:EXT:theme_kom/Resources/Private/Language/locallang.xlf:menu.language.{entry.class}')}"
+														 argumentsToBeExcludedFromQueryString="{0: 'id'}">
+									<f:image
+										src="EXT:core/Resources/Public/Icons/Flags/SVG/{v:format.case(string: '{entry.flag}', case: 'upper')}.svg"
+										class="menu-language__dropdown-flag"
+										title="{f:translate(key: 'LLL:EXT:theme_kom/Resources/Private/Language/locallang.xlf:menu.language.{entry.class}')}"
+										alt="{f:translate(key: 'LLL:EXT:theme_kom/Resources/Private/Language/locallang.xlf:menu.language.{entry.class}')}"
+										maxWidth="20"/>
+										<span>
+											<f:translate
+												key="LLL:EXT:theme_kom/Resources/Private/Language/locallang.xlf:menu.language.{entry.class}"/>
+										</span>
+								</f:link.page>
+							</f:then>
+							<f:else>
+								<!-- Not translated! -->
+								<a class="dropdown-item {entry.class} noTranslation" href="#">
+									<span>
+										<f:translate
+											key="LLL:EXT:theme_kom/Resources/Private/Language/locallang.xlf:menu.language.{entry.class}"/>
+									</span>
+									<f:image
+										src="EXT:core/Resources/Public/Icons/Flags/SVG/{v:format.case(string: '{entry.flag}', case: 'upper')}.svg"
+										class="menu-language__dropdown-flag"
+										title="{f:translate(key: 'LLL:EXT:theme_kom/Resources/Private/Language/locallang.xlf:menu.language.{entry.class}')}"
+										alt="{f:translate(key: 'LLL:EXT:theme_kom/Resources/Private/Language/locallang.xlf:menu.language.{entry.class}')}"
+										maxWidth="20"/>
+								</a>
+							</f:else>
+						</f:if>
+					</f:else>
+				</f:if>
+			</f:for>
+	</div>
+</span>

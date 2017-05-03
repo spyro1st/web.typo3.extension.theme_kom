@@ -1,0 +1,171 @@
+
+lib.menu.footer.col_1 = COA
+lib.menu.footer.col_1 {
+
+	stdWrap.required = 1
+	stdWrap.wrap = <ul class="menu-footer"> | </ul>
+
+	30 = HMENU
+	30 {
+		special = list
+		special.value = {$themes.configuration.menu.footer.col_1.containerPid}
+		includeNotInMenu = {$themes.configuration.menu.footer.col_1.includeNotInMenu}
+		excludeUidList = {$themes.configuration.menu.footer.col_1.excludeUidList}
+
+		1 = TMENU
+		1 {
+			expAll = 1
+			NO = 1
+			NO {
+				doNotLinkIt = 1
+				doNotShowLink = 0
+				doNotShowLink.override = 1
+				doNotShowLink.override.if.isGreaterThan.field = doktype
+				doNotShowLink.override.if.value = 100
+				stdWrap.required = 1
+				stdWrap.wrap = <li class="menu-footer__header">|</li>
+			}
+		}
+		2 = TMENU
+		2 {
+			expAll = 1
+			NO = 1
+			NO {
+				wrapItemAndSub = <li class="menu-footer__item">|</li>
+			}
+			ACT < .NO
+			ACT.wrapItemAndSub = <li class="menu-footer__item active">|</li>
+		}
+	}
+}
+
+lib.menu.footer.col_2 < lib.menu.footer.col_1
+lib.menu.footer.col_2.30.special.value = {$themes.configuration.menu.footer.col_2.containerPid}
+lib.menu.footer.col_2.30.includeNotInMenu = {$themes.configuration.menu.footer.col_2.includeNotInMenu}
+lib.menu.footer.col_2.30.excludeUidList = {$themes.configuration.menu.footer.col_2.excludeUidList}
+lib.menu.footer.col_2.30.1.NO {
+	stdWrap.append = COA
+	stdWrap.append {
+		10 = TEXT
+		10 {
+			value = {$themes.configuration.header.phone-href}
+			insertData = 1
+			wrap = <li class="menu-footer__content"><a class="btn btn-default btn-sm" href="tel:|"><i class="flaticon-phone-o"></i>{$themes.configuration.header.phone}</a></li>
+		}
+		20 = TEXT
+		20 {
+			data = LLL:EXT:theme_kom/Resources/Private/Language/locallang.xlf:footer.email.linktext
+			wrap = <li class="menu-footer__content"><a class="btn btn-default btn-sm" href="mailto:{$themes.configuration.header.email}"><i class="flaticon-mail"></i>|</a></li>
+		}
+	}
+}
+
+lib.menu.footer.col_3 < lib.menu.footer.col_1
+lib.menu.footer.col_3.30.special.value = {$themes.configuration.menu.footer.col_3.containerPid}
+lib.menu.footer.col_3.30.includeNotInMenu = {$themes.configuration.menu.footer.col_3.includeNotInMenu}
+lib.menu.footer.col_3.30.excludeUidList = {$themes.configuration.menu.footer.col_3.excludeUidList}
+
+lib.menu.footer.col_4 < lib.menu.footer.col_1
+lib.menu.footer.col_4.30.special.value = {$themes.configuration.menu.footer.col_4.containerPid}
+lib.menu.footer.col_4.30.includeNotInMenu = {$themes.configuration.menu.footer.col_4.includeNotInMenu}
+lib.menu.footer.col_4.30.excludeUidList = {$themes.configuration.menu.footer.col_4.excludeUidList}
+
+lib.menu.footer.col_5 < lib.menu.footer.col_1
+lib.menu.footer.col_5.30.special.value = {$themes.configuration.menu.footer.col_5.containerPid}
+lib.menu.footer.col_5.30.includeNotInMenu = {$themes.configuration.menu.footer.col_5.includeNotInMenu}
+lib.menu.footer.col_5.30.excludeUidList = {$themes.configuration.menu.footer.col_5.excludeUidList}
+
+lib.menu.footer.col_6 < lib.menu.footer.col_1
+lib.menu.footer.col_6.30.special.value = {$themes.configuration.menu.footer.col_6.containerPid}
+lib.menu.footer.col_6.30.includeNotInMenu = {$themes.configuration.menu.footer.col_6.includeNotInMenu}
+lib.menu.footer.col_6.30.excludeUidList = {$themes.configuration.menu.footer.col_6.excludeUidList}
+
+lib.menu.footer.col_1_mobile_head = HMENU
+lib.menu.footer.col_1_mobile_head {
+	special = list
+	special.value = {$themes.configuration.menu.footer.col_1.containerPid}
+	includeNotInMenu = {$themes.configuration.menu.footer.col_1.includeNotInMenu}
+	excludeUidList = {$themes.configuration.menu.footer.col_1.excludeUidList}
+
+	1 = TMENU
+	1 {
+		expAll = 1
+		NO = 1
+		NO {
+			doNotLinkIt = 1
+			doNotShowLink = 0
+			stdWrap.required = 1
+			stdWrap.wrap = |
+		}
+	}
+}
+
+lib.menu.footer.col_2_mobile_head < lib.menu.footer.col_1_mobile_head
+lib.menu.footer.col_2_mobile_head.special.value = {$themes.configuration.menu.footer.col_2.containerPid}
+
+lib.menu.footer.col_3_mobile_head < lib.menu.footer.col_1_mobile_head
+lib.menu.footer.col_3_mobile_head.special.value = {$themes.configuration.menu.footer.col_3.containerPid}
+
+lib.menu.footer.col_4_mobile_head < lib.menu.footer.col_1_mobile_head
+lib.menu.footer.col_4_mobile_head.special.value = {$themes.configuration.menu.footer.col_4.containerPid}
+
+lib.menu.footer.col_5_mobile_head < lib.menu.footer.col_1_mobile_head
+lib.menu.footer.col_5_mobile_head.special.value = {$themes.configuration.menu.footer.col_5.containerPid}
+
+lib.menu.footer.col_6_mobile_head < lib.menu.footer.col_1_mobile_head
+lib.menu.footer.col_6_mobile_head.special.value = {$themes.configuration.menu.footer.col_6.containerPid}
+
+lib.menu.footer.col_1_mobile_content = COA
+lib.menu.footer.col_1_mobile_content {
+
+	30 = HMENU
+	30 {
+		special = list
+		special.value = {$themes.configuration.menu.footer.col_1.containerPid}
+		includeNotInMenu = {$themes.configuration.menu.footer.col_1.includeNotInMenu}
+		excludeUidList = {$themes.configuration.menu.footer.col_1.excludeUidList}
+
+		stdWrap.wrap = <ul class="menu-footer">|</ul>
+		stdWrap.required = 1
+		
+		1 = TMENU
+		1 {
+			
+			expAll = 1
+			NO = 1
+			NO {
+				doNotLinkIt = 1
+				doNotShowLink = 1
+			}
+		}
+		2 = TMENU
+		2 {
+			expAll = 1
+			NO = 1
+			NO {
+				wrapItemAndSub = <li class="menu-footer__item">|</li>
+			}
+			ACT < .NO
+			ACT.wrapItemAndSub = <li class="menu-footer__item active">|</li>
+		}
+	}
+}
+
+lib.menu.footer.col_2_mobile_content < lib.menu.footer.col_1_mobile_content
+lib.menu.footer.col_2_mobile_content.30.stdWrap.required >
+lib.menu.footer.col_2_mobile_content.30.stdWrap.wrap >
+lib.menu.footer.col_2_mobile_content.30.special.value = {$themes.configuration.menu.footer.col_2.containerPid}
+lib.menu.footer.col_2_mobile_content.30.stdWrap.append < lib.menu.footer.col_2.30.1.NO.stdWrap.append
+lib.menu.footer.col_2_mobile_content.30.stdWrap.append.stdWrap.wrap = <ul class="menu-footer">|</ul>
+
+lib.menu.footer.col_3_mobile_content < lib.menu.footer.col_1_mobile_content
+lib.menu.footer.col_3_mobile_content.30.special.value = {$themes.configuration.menu.footer.col_3.containerPid}
+
+lib.menu.footer.col_4_mobile_content < lib.menu.footer.col_1_mobile_content
+lib.menu.footer.col_4_mobile_content.30.special.value = {$themes.configuration.menu.footer.col_4.containerPid}
+
+lib.menu.footer.col_5_mobile_content < lib.menu.footer.col_1_mobile_content
+lib.menu.footer.col_5_mobile_content.30.special.value = {$themes.configuration.menu.footer.col_5.containerPid}
+
+lib.menu.footer.col_6_mobile_content < lib.menu.footer.col_1_mobile_content
+lib.menu.footer.col_6_mobile_content.30.special.value = {$themes.configuration.menu.footer.col_6.containerPid}

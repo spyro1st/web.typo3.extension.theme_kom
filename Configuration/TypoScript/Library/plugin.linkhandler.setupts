@@ -1,0 +1,21 @@
+plugin.tx_linkhandler.tt_address {
+
+	// Do not force link generation when the record records are hidden or deleted.
+	forceLink = 0
+
+	typolink {
+		parameter.cObject = TEXT
+		parameter.cObject {
+			field = phone
+			stdWrap.replacement {
+				10 {
+					search.char = 32
+					replace =
+				}
+			}
+			wrap = tel:|
+		}
+		forceAbsoluteUrl = 0
+		useCacheHash = 0
+	}
+}

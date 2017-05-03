@@ -1,0 +1,107 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:if condition="{data.layout}==1">
+		<div id="c{data.uid}">
+			<div class="ce-textpic ce-{gallery.position.horizontal} ce-{gallery.position.vertical}{f:if(condition: gallery.position.noWrap, then: ' ce-nowrap')}">
+				<button class="btn-modal" data-toggle="modal" data-target=".bd-example-modal-{data.uid}">
+					<f:if condition="{gallery.position.vertical} != 'below'">
+						<f:render partial="MediaGallery" arguments="{_all}" />
+					</f:if>
+
+					<div class="ce-bodytext">
+						<f:if condition="{gallery.position.noWrap}">
+							<f:render partial="Header" arguments="{_all}" />
+						</f:if>
+						<f:format.html>{data.bodytext}</f:format.html>
+					</div>
+
+					<f:if condition="{gallery.position.vertical} == 'below'">
+						<f:render partial="MediaGallery" arguments="{_all}" />
+					</f:if>
+				</button>
+				<div class="modal fade bd-example-modal-{data.uid}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-lg">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+								<h4 class="modal-title" id="myModalLabel">Unsere Zertifikate</h4>
+							</div>
+							<div class="modal-body">
+								<f:if condition="{gallery.position.vertical} != 'below'">
+									<f:render partial="MediaGallery" arguments="{_all}" />
+								</f:if>
+
+								<div class="ce-bodytext">
+									<f:if condition="{gallery.position.noWrap}">
+										<f:render partial="Header" arguments="{_all}" />
+									</f:if>
+									<f:format.html>{data.bodytext}</f:format.html>
+								</div>
+
+								<f:if condition="{gallery.position.vertical} == 'below'">
+									<f:render partial="MediaGallery" arguments="{_all}" />
+								</f:if>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</f:if>
+	<f:if condition="{data.layout}==0">
+		<div id="c{data.uid}">
+			<f:if condition="{gallery.position.noWrap} != 1">
+				<f:render partial="Header" arguments="{_all}" />
+			</f:if>
+
+			<div class="ce-textpic ce-{gallery.position.horizontal} ce-{gallery.position.vertical}{f:if(condition: gallery.position.noWrap, then: ' ce-nowrap')}">
+				<f:if condition="{gallery.position.vertical} != 'below'">
+					<f:render partial="MediaGallery" arguments="{_all}" />
+				</f:if>
+
+				<div class="ce-bodytext">
+					<f:if condition="{gallery.position.noWrap}">
+						<f:render partial="Header" arguments="{_all}" />
+					</f:if>
+					<f:format.html>{data.bodytext}</f:format.html>
+				</div>
+
+				<f:if condition="{gallery.position.vertical} == 'below'">
+					<f:render partial="MediaGallery" arguments="{_all}" />
+				</f:if>
+			</div>
+
+			<f:render partial="Footer" arguments="{_all}" />
+		</div>
+	</f:if>
+	<f:if condition="{data.layout}==2">
+		<div id="c{data.uid}">
+			<f:render partial="Header" arguments="{_all}" />
+			<f:format.html  parseFuncTSPath=""><iframe class="ce-border" src={data.bodytext} width="100%" height="450" frameborder="0" allowfullscreen></iframe></f:format.html>
+		</div>
+	</f:if>
+	<f:if condition="{data.layout}==3">
+		<div class="row">
+			<div class="col-xs-12">
+				<blockquote class="blockquote text-xs-center text-sm-left">
+					<div class="quote__body quote__body-noline">
+						<p class="quote__body-p">{data.bodytext}</p>
+					</div>
+					<div class="blockquote-footer quote__footer">
+							<span class="quote__footer-name">{headers.0}<f:render section="nameSuffix" arguments="{title: headers.1, link: data.header_link}" /></span>
+
+							<cite class="quote__footer-title" title="{headers.1}">{headers.1}<f:render section="nameSuffix" arguments="{link: data.header_link}" />
+
+							</cite>
+					</div>
+				</blockquote>
+			</div>
+		</div>
+
+		<!-- In one line to aviod an extra space before the comma sign-->
+		<f:section name="nameSuffix"><f:if condition="{title}"><f:then> - </f:then><f:else><f:if condition="{link}"><f:then> - </f:then></f:if></f:else></f:if></f:section>
+		<f:section name="titleSuffix"><f:if condition="{link}"><f:then> - </f:then></f:if></f:section>
+
+	</f:if>
+</html>

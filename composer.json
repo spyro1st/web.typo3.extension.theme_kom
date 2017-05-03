@@ -1,0 +1,12 @@
+{
+	"name": "digitalpatrioten/theme_kom",
+	"type": "typo3-cms-extension",
+	"description": "Kandidat-O-Mat TYPO3 CMS Theme",
+	"license": ["GPL-2.0+"],
+	"version": "1.0.0",
+	"autoload": {
+		"psr-4": {
+			"DigitalPatrioten\\ThemeKom\\": "Classes/"
+		}
+	}
+}

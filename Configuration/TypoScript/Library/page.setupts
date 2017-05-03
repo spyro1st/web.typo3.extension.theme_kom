@@ -1,0 +1,241 @@
+config {
+
+	# Enable spam protection
+	spamProtectEmailAddresses = 0
+#	spamProtectEmailAddresses_atSubst = {$themes.configuration.spamProtectEmailAddresses.atSubst}
+#	spamProtectEmailAddresses_lastDotSubst = {$themes.configuration.spamProtectEmailAddresses.lastDotSubst}
+
+	htmlTag_stdWrap {
+		setContentToCurrent = 1
+		cObject = COA
+		cObject {
+
+			10 = TEXT
+			10 {
+				value = no-js
+				noTrimWrap = | class="|"|
+			}
+			
+			20 = TEXT
+			20 {
+				stdWrap.insertData = 1
+				stdWrap.noTrimWrap = | lang="|{$themes.languages.current.isoCodeShort}"|
+			}
+
+			wrap = <html|>
+		}
+	}
+}
+
+page {
+	# set favicon
+	shortcutIcon = EXT:theme_kom/Resources/Public/Icons/favicon.ico
+
+	# set body tag
+	bodyTagCObject >
+	bodyTagCObject = COA
+	bodyTagCObject {
+
+		wrap = |
+		stdWrap.wrap = <body|>
+
+		10 = TEXT
+		10 {
+			field = uid
+			noTrimWrap = | id="pid-|"
+		}
+
+		20 = COA
+		20 {
+			stdWrap.insertData = 1
+			stdWrap.noTrimWrap = | class="| language-{$themes.languages.current.isoCodeShort}"|
+
+			10 = CASE
+			10 {
+				key.field = backend_layout
+				key.ifEmpty.data = levelfield:-2, backend_layout_next_level, slide
+
+				stdWrap.insertData = 1
+				stdWrap.noTrimWrap = | layout-| |
+
+				default = TEXT
+				default.value = default
+
+				pagets__ContentStartsite = TEXT
+				pagets__ContentStartsite.value = startsite
+			}
+		}
+	}
+
+	typeNum = 0
+
+	includeCSS {
+		theme = EXT:theme_kom/Resources/Public/Stylesheets/styles.css
+	}
+
+	includeJS {
+		modernizr = EXT:theme_kom/Resources/Public/JavaScripts/modernizr-custom.js
+	}
+
+	includeJSFooter {
+		jquery = EXT:theme_kom/Resources/Public/JavaScripts/jquery.js
+		main = EXT:theme_kom/Resources/Public/JavaScripts/Scripts.js
+	}
+
+	headerData.51 = HMENU
+	headerData.51 {
+		special = language
+		# language IDs
+		special.value = 0,1,2
+		1 = TMENU
+		1 {
+			NO = 1
+			NO {
+				stdWrap.cObject = TEXT
+				stdWrap.cObject {
+					value = de-DE || en || fr
+				}
+				linkWrap = <link rel="alternate" hreflang="|
+				doNotLinkIt = 1
+				after.cObject = COA
+				after.cObject {
+					5 = TEXT
+					5 {
+						stdWrap {
+							wrap = " href="|" />
+							typolink {
+								parameter.data = page:uid
+								additionalParams = &L=0 |*| &L=1 |*| &L=2
+								returnLast = url
+								# absolute URL
+								forceAbsoluteUrl = 1
+								# for extionsons
+								addQueryString = 1
+							}
+						}
+					}
+					10 < linebreak
+				}
+			}
+			CUR = 1
+			CUR {
+				doNotShowLink = 1
+			}
+		}
+	}
+
+	headerData.186 = COA
+	headerData.186 {
+		5 < linebreak
+
+		6 = TEXT
+		6.dataWrap (
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css' />
+		)
+		7 < linebreak
+
+		10 = TEXT
+		10.dataWrap (
+<link href="{path:EXT:theme_kom/Resources/Public/Icons/apple-touch-icon.png}" rel="apple-touch-icon" />
+<link href="{path:EXT:theme_kom/Resources/Public/Icons/apple-touch-icon-57x57.png}" rel="apple-touch-icon" sizes="57x57" />
+<link href="{path:EXT:theme_kom/Resources/Public/Icons/apple-touch-icon-60x60.png}" rel="apple-touch-icon" sizes="60x60" />
+<link href="{path:EXT:theme_kom/Resources/Public/Icons/apple-touch-icon-72x72.png}" rel="apple-touch-icon" sizes="72x72" />
+<link href="{path:EXT:theme_kom/Resources/Public/Icons/apple-touch-icon-76x76.png}" rel="apple-touch-icon" sizes="76x76" />
+<link href="{path:EXT:theme_kom/Resources/Public/Icons/apple-touch-icon-114x114.png}" rel="apple-touch-icon" sizes="114x114" />
+<link href="{path:EXT:theme_kom/Resources/Public/Icons/apple-touch-icon-120x120.png}" rel="apple-touch-icon" sizes="120x120" />
+<link href="{path:EXT:theme_kom/Resources/Public/Icons/favicon-16x16.png}" rel="icon" type="image/png" sizes="16x16" />
+<link href="{path:EXT:theme_kom/Resources/Public/Icons/favicon-32x32.png}" rel="icon" type="image/png" sizes="32x32" />
+<link href="{path:EXT:theme_kom/Resources/Public/Icons/favicon-96x96.png}" rel="icon" type="image/png" sizes="96x96" />
+
+<link rel="mask-icon" href="{path:EXT:theme_kom/Resources/Public/Icons/safari-pinned-tab.svg}" color="#ff9934">
+<link rel="manifest" href="{path:EXT:theme_kom/Resources/Public/Icons/manifest.json}" />
+
+<meta name="application-name" content="{$themes.configuration.siteName}" />
+<meta name="apple-mobile-web-app-title" content="{$themes.configuration.siteName}" />
+<meta name="msapplication-TileColor" content="{$themes.configuration.siteColor}" />
+<meta name="theme-color" content="{$themes.configuration.siteColor}" />
+		)
+		15 <linebreak
+		20 = TEXT
+		20.value (
+
+<!-- Developed by DigitalPatrioten AG -->
+<!-- www.digitalpatrioten.com - info@digitalpatrioten.com -->
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+)
+	}
+
+	headerData.60 = TEXT
+	headerData.60 {
+		typolink {
+			parameter.field = tx_metaseo_canonicalurl
+			parameter.ifEmpty.field = uid
+			addQueryString = 1
+			forceAbsoluteUrl = 1
+			returnLast = url
+		}
+		wrap = <link rel="canonical" href="|" />
+	}
+
+	headerData.70 = COA
+	headerData.70 {
+		stdWrap.if.isFalse.data = GP:tx_news_pi1|news
+
+		10 = TEXT
+		10 {
+			value = {$themes.configuration.socialmedia.twitterCard}
+			wrap = <meta property="twitter:card" content="|" />
+		}
+
+		20 = TEXT
+		20 {
+			value = {$themes.configuration.socialmedia.twitterSite}
+			wrap = <meta property="twitter:site" content="|" />
+		}
+
+		30 = TEXT
+		30 {
+			field = title
+			wrap = <meta property="twitter:title" content="|" />
+		}
+
+		40 = FILES
+		40 {
+			references {
+				table = pages
+				uid.data = page:uid
+				fieldName = tx_themekom_socialmedia_image
+			}
+
+			renderObj = TEXT
+			renderObj {
+				typolink {
+					parameter.cObject = IMG_RESOURCE
+					parameter.cObject {
+						file {
+							import.data = file:current:originalUid // file:current:uid
+							width = 640c
+							height = 360c
+							maxWidth = 640
+							maxHeight = 360
+						}
+						stdWrap.required = 1
+						stdWrap.noTrimWrap = |
+					}
+					forceAbsoluteUrl = 1
+					returnLast = url
+				}
+				wrap = <meta property="twitter:image" content="|" />
+			}
+		}
+
+		50 = TEXT
+		50 {
+			field = description
+			wrap = <meta property="twitter:description" content="|" />
+		}
+	}
+}

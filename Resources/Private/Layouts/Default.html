@@ -1,0 +1,16 @@
+{namespace theme=KayStrobach\Themes\ViewHelpers}
+<!-- theme_kom: Layouts/Default.html [begin] -->
+
+<f:render partial="Elements/GoogleTagManager" section="Default" arguments="{_all}"/>
+
+<div class="navbar-fixed-top">
+	<f:render partial="Area/Nav/Desktop" section="Default" arguments="{_all}"/>
+	<f:render partial="Area/Nav/Mobile" section="Default" arguments="{_all}"/>
+	<f:render partial="Area/Nav/General" section="Default" arguments="{_all}"/>
+</div>
+
+<!-- SECTION DEFAULT/MAIN CONTENT -->
+<f:render section="Default"/>
+<!-- // SECTION DEFAULT/MAIN CONTENT -->
+
+<!-- theme_kom: Layouts/Default.html [end] -->

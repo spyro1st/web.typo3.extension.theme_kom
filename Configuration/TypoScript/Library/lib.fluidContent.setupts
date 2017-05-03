@@ -1,0 +1,32 @@
+lib.fluidContent {
+	settings {
+		media {
+			popup >
+			popup {
+				JSwindow = 0
+				directImageLink = 1
+				linkParams.ATagParams.cObject = COA
+				linkParams.ATagParams.cObject {
+
+					10 = TEXT
+					10 {
+						field = uid
+						insertData = 1
+						wrap = data-lightbox="lightbox|"
+					}
+
+					20 = TEXT
+					20 {
+						data = file:current:description
+						br = 1
+						required= 1
+						insertData = 1
+						noTrimWrap = | data-title="|"|
+					}
+				}
+				width = 800m
+				height = 600
+			}
+		}
+	}
+}

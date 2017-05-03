@@ -1,0 +1,158 @@
+/****************************************************************************************
+# Default css file for content edited with htmlArea RTE
+#
+# Defines a few class selectors that can be simply taken as examples by anyone who needs to configure the RTE.
+# This css file is referenced by property RTE.default.contentCSS in the default configuration of htmlArea RTE.
+# ***************************************************************************************/
+
+/* Left, center, right and justify alignment of text in block elements*/
+.align-center {
+	text-align: center;
+}
+
+.text-justify,
+.align-justify {
+	text-align: justify;
+}
+
+.align-left {
+	text-align: left;
+}
+
+.align-right {
+	text-align: right;
+}
+
+span.important {
+	font-weight: bold;
+}
+
+/* Selectors for the default configuration of the link accessibity feature.*/
+a.external-link {
+}
+
+a.internal-link {
+}
+
+a.default-link {
+}
+
+a.download {
+}
+
+a.mail {
+}
+
+/****************************************************************************************
+# Define your class selectors
+# ***************************************************************************************/
+
+/* Typography - Headings */
+div.h1,
+p.h1,
+span.h1 {
+	font-size: 2em;
+	font-weight: bold;
+}
+
+div.h2,
+p.h2,
+span.h2 {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+div.h3,
+p.h3,
+span.h3 {
+	font-size: 1.17em;
+	font-weight: bold;
+}
+
+div.h4,
+p.h4,
+span.h4 {
+	font-size: 1.33em;
+	font-weight: bold;
+}
+
+div.h5,
+p.h5,
+span.h5 {
+	font-size: 0.83em;
+	font-weight: bold;
+}
+
+div.h6,
+p.h6,
+span.h6 {
+	font-size: 0.67em;
+	font-weight: bold;
+}
+
+/* Typography - Abbreviations */
+abbr.initialism {
+	font-size: 0.9em;
+}
+
+/* Typography - Blockquotes */
+blockquote {
+	color: #9d9c9c;
+	font-size: 22px;
+	font-style: italic;
+	margin: 0;
+	padding: 0;
+}
+
+/* Lists */
+
+ul > li {
+	padding-bottom: 8px;
+}
+
+ul.list-styled,
+ul.list-checked {
+	padding: 0;
+	list-style-type: none;
+}
+
+.list-styled > li,
+.list-checked > li {
+	position: relative;
+	padding-left: 1.5rem;
+}
+
+.list-styled > li:before {
+	content: "";
+	position: absolute;
+	top: 4px;
+	left: 0;
+	width: 8px;
+	height: 8px;
+	background: green;
+}
+
+ul.list-checked > li::before {
+	content: "\f103";
+	position: absolute;
+	font-family: "flaticon";
+	top: 4px;
+	left: 0;
+	width: 8px;
+	height: 8px;
+	color: green;
+}
+
+/* Links */
+
+a,
+a.external-link,
+a.external-link-new-window,
+a.internal-link,
+a.internal-link-new-window,
+a.download,
+a.mail,
+a.default-link {
+	color: green;
+	text-decoration: none;
+}

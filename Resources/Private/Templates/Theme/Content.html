@@ -1,0 +1,31 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en" xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+	<f:layout name="Default" />
+	<f:section name="Default">
+		<!-- theme_kom: Templates/Theme/Content.html [begin] -->
+
+		<div class="content__main--wrapper">
+			<div class="content__main">
+				<header class="header__main">
+					<div class="container pt-2">
+						<div class="row">
+							<div class="col-xs-12 mt-3">
+								<f:render partial="Content/Featured" section="Default" arguments="{_all}" />
+							</div>
+						</div>
+					</div>
+				</header>
+				<main class="container">
+					<div class="row">
+						<div class="col-xs-12 col-md-10 offset-md-1">
+							<f:render partial="Content/Main" section="Default" arguments="{_all}" />
+						</div>
+					</div>
+				</main>
+			</div>
+			<f:render partial="Area/Footer/Desktop" section="Default" arguments="{_all}"/>
+			<f:render partial="Area/Footer/Mobile" section="Default" arguments="{_all}"/>
+		</div>
+
+		<!-- theme_kom: Templates/Theme/Content.html [end] -->
+	</f:section>
+</div>

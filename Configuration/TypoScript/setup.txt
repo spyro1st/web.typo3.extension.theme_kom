@@ -1,0 +1,7 @@
+linebreak = TEXT
+linebreak.value (
+
+
+)
+
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_kom/Configuration/TypoScript/Library/" extensions="setupts">

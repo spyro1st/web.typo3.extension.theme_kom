@@ -1,0 +1,22 @@
+{
+	"name": "theme-kom",
+	"version": "1.0.0",
+	"authors": [
+		"DigitalPatrioten AG"
+	],
+	"moduleType": [
+		"node"
+	],
+	"license": "MIT",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
+	"devDependencies": {
+		"bootstrap": "4.0.0-alpha.6"
+	},
+	"dependencies": {}
+}

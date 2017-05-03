@@ -1,0 +1,24 @@
+lib.parseFunc_RTE {
+	tags {
+		link {
+			typolink {
+				parameter.parseFunc.short {
+					button-primary = "btn btn-primary flaticon-arrowright"
+					button-secondary = "btn btn-secondary flaticon-arrowright"
+
+					button-primary-phone-o = "btn btn-primary flaticon-phone-o"
+					button-secondary-phone-o = "btn btn-secondary flaticon-phone-o"
+
+					button-primary-mail = "btn btn-primary flaticon-mail"
+					button-secondary-mail = "btn btn-secondary flaticon-mail"
+
+					button-primary-ticket = "btn btn-primary flaticon-ticket"
+					button-secondary-ticket = "btn btn-secondary flaticon-ticket"
+
+					button-primary-ticket-o = "btn btn-primary flaticon-ticket-o"
+					button-secondary-ticket-o = "btn btn-secondary flaticon-ticket-o"
+				}
+			}
+		}
+	}
+}

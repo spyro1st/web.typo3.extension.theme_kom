@@ -1,0 +1,63 @@
+# Breadcrumb with itemscope and Bootstrap classes
+#
+# Constants:
+# {$themes.configuration.menu.breadcrumb.prefix}
+# {$themes.configuration.menu.breadcrumb.divider}
+# {$themes.configuration.menu.breadcrumb.cssClasses}
+#
+# Usage:
+# <f:cObject typoscriptObjectPath="lib.menu.breadcrumb"/>
+#
+lib.menu.breadcrumb = COA
+lib.menu.breadcrumb {
+	stdWrap.wrap = <ol class="menu-breadcrumb list-inline" vocab="http://schema.org/" typeof="BreadcrumbList">|</ol>
+	stdWrap.required = 1
+
+	10 = HMENU
+	10 {
+		special = rootline
+		special.range = 0|-1
+		includeNotInMenu = {$themes.configuration.menu.breadcrumb.includeNotInMenu}
+		excludeUidList = {$themes.configuration.menu.breadcrumb.excludeUidList}
+
+		1 = TMENU
+		1 {
+			noBlur = 1
+			NO {
+				stdWrap.htmlSpecialChars = 1
+				doNotLinkIt >
+				doNotLinkIt.cObject = TEXT
+				doNotLinkIt.cObject {
+					value = |*| 0 |*| 1
+				}
+				linkWrap = <li property="itemListElement" typeof="ListItem">|</li>
+				ATagParams = property="itemListElement" typeof="ListItem" title="{field:subtitle//field:title}"
+				ATagParams.insertData = 1
+				stdWrap.wrap = <span property="name">|</span>
+			}
+		}
+	}
+
+	# Add news title if on single view
+	20 = RECORDS
+	20 {
+		if.isTrue.data = GP:tx_news_pi1|news
+		dontCheckPid = 1
+		tables = tx_news_domain_model_news
+		source.data = GP:tx_news_pi1|news
+		source.intval = 1
+		conf.tx_news_domain_model_news = TEXT
+		conf.tx_news_domain_model_news {
+			field = title
+			htmlSpecialChars = 1
+			typolink {
+				parameter.data = getIndpEnv:TYPO3_REQUEST_URL
+				ATagParams = class="disabled" property="itemListElement" typeof="ListItem" title="{field:subtitle//field:title}"
+				ATagParams.insertData = 1
+			}
+			wrap = <span property="name">|</span>
+		}
+		stdWrap.required = 1
+		stdWrap.wrap =  <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">|</li>
+	}
+}

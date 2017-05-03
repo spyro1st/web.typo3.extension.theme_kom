@@ -1,0 +1,5 @@
+config.prefixLocalAnchors >
+config.tx_realurl_enable = 1
+config.simulateStaticDocuments = 0
+config.baseURL >
+config.absRefPrefix = /
