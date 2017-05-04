@@ -8419,6 +8419,7 @@ small,
 }
 
 select {
+  -moz-appearance: none;
   -webkit-appearance: none;
 }
 
