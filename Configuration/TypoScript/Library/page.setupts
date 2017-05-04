@@ -1,9 +1,17 @@
 config {
+	linkVars = L(1-99) 
+	uniqueLinkVars = 1
+	sys_language_uid = {$themes.languages.default.uid}
+	language = {$themes.languages.default.isoCodeShort}
+	locale_all = {$themes.languages.default.isoCode}.UTF-8
+	htmlTag_langKey = {$themes.languages.default.isoCodeHtml}
+	sys_language_overlay = hideNonTranslated
+	sys_language_mode = content_fallback
+	doctype = html5
+	metaCharset = UTF-8
 
 	# Enable spam protection
-	spamProtectEmailAddresses = 0
-#	spamProtectEmailAddresses_atSubst = {$themes.configuration.spamProtectEmailAddresses.atSubst}
-#	spamProtectEmailAddresses_lastDotSubst = {$themes.configuration.spamProtectEmailAddresses.lastDotSubst}
+	spamProtectEmailAddresses = 1
 
 	htmlTag_stdWrap {
 		setContentToCurrent = 1
@@ -19,7 +27,7 @@ config {
 			20 = TEXT
 			20 {
 				stdWrap.insertData = 1
-				stdWrap.noTrimWrap = | lang="|{$themes.languages.current.isoCodeShort}"|
+				stdWrap.noTrimWrap = | lang="|{$themes.languages.default.isoCodeHtml}"|
 			}
 
 			wrap = <html|>
@@ -27,6 +35,7 @@ config {
 	}
 }
 
+page = PAGE
 page {
 	# set favicon
 	shortcutIcon = EXT:theme_kom/Resources/Public/Icons/favicon.ico
@@ -48,7 +57,7 @@ page {
 		20 = COA
 		20 {
 			stdWrap.insertData = 1
-			stdWrap.noTrimWrap = | class="| language-{$themes.languages.current.isoCodeShort}"|
+			stdWrap.noTrimWrap = | class="| language-{$themes.languages.default.isoCodeShort}"|
 
 			10 = CASE
 			10 {
@@ -61,8 +70,8 @@ page {
 				default = TEXT
 				default.value = default
 
-				pagets__ContentStartsite = TEXT
-				pagets__ContentStartsite.value = startsite
+				pagets__ContentStart = TEXT
+				pagets__ContentStart.value = start
 			}
 		}
 	}
@@ -80,48 +89,6 @@ page {
 	includeJSFooter {
 		jquery = EXT:theme_kom/Resources/Public/JavaScripts/jquery.js
 		main = EXT:theme_kom/Resources/Public/JavaScripts/Scripts.js
-	}
-
-	headerData.51 = HMENU
-	headerData.51 {
-		special = language
-		# language IDs
-		special.value = 0,1,2
-		1 = TMENU
-		1 {
-			NO = 1
-			NO {
-				stdWrap.cObject = TEXT
-				stdWrap.cObject {
-					value = de-DE || en || fr
-				}
-				linkWrap = <link rel="alternate" hreflang="|
-				doNotLinkIt = 1
-				after.cObject = COA
-				after.cObject {
-					5 = TEXT
-					5 {
-						stdWrap {
-							wrap = " href="|" />
-							typolink {
-								parameter.data = page:uid
-								additionalParams = &L=0 |*| &L=1 |*| &L=2
-								returnLast = url
-								# absolute URL
-								forceAbsoluteUrl = 1
-								# for extionsons
-								addQueryString = 1
-							}
-						}
-					}
-					10 < linebreak
-				}
-			}
-			CUR = 1
-			CUR {
-				doNotShowLink = 1
-			}
-		}
 	}
 
 	headerData.186 = COA
@@ -236,6 +203,33 @@ page {
 		50 {
 			field = description
 			wrap = <meta property="twitter:description" content="|" />
+		}
+	}
+	
+	10 = FLUIDTEMPLATE
+	10 {
+		templateName = TEXT 
+		templateName.stdWrap {
+			cObject = CASE
+			cObject {
+				key.field = backend_layout 
+				key.ifEmpty.data = levelfield:-2, backend_layout_next_level, slide 
+				default = TEXT 
+				default.value = Content 
+				pagets__ContentStart = TEXT 
+				pagets__ContentStart.value = ContentStart
+				pagets__Content = TEXT 
+				pagets__Content.value = Content
+			}
+		}
+		layoutRootPaths {
+			10 = EXT:theme_kom/Resources/Private/Layouts
+		}
+		templateRootPaths {
+			10 = EXT:theme_kom/Resources/Private/Templates/Theme
+		}
+		partialRootPaths {
+			10 = EXT:theme_kom/Resources/Private/Partials
 		}
 	}
 }

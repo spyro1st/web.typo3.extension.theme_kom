@@ -4,5 +4,12 @@
 @import "../Vendor/bootstrap/scss/bootstrap";
 
 // Common styles
+@import "fonts";
+@import "flaticon";
+@import "type";
+@import "navbar";
+@import "forms";
 
 // Modules
+@import "Modules/footer";
+@import "Modules/start";

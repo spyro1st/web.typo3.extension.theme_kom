@@ -5,6 +5,53 @@
 
 // Options
 
-$enable-flex: true;
 $enable-rounded: false;
 $enable-shadows: false;
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif: "Open Sans", Arial, sans-serif;
+
+$font-weight-base: 300;
+$headings-font-weight: 600;
+
+$font-size-h1: 2rem;
+
+// Forms
+
+$input-padding-x: 1rem;
+$input-padding-y: 1rem;
+$input-line-height: 1.5;
+$input-btn-border-width: 0;
+$input-box-shadow: none;
+
+// Start with assigning color names to specific hex values.
+$white: #ffffff;
+$white-light: rgba($white, .8);
+$white-lightest: rgba($white, .4);
+$black: #000000;
+$red: rgb(181, 24, 31);
+$orange: #f0ad4e;
+$yellow: #ffd500;
+$green: #5cb85c;
+$blue: #0275d8;
+$teal: #5bc0de;
+$pink: #ff5b77;
+$purple: #613d7c;
+
+// Create grayscale
+$gray-dark: #292b2c;
+$gray: #464a4c;
+$gray-light: #636c72;
+$gray-lighter: #eceeef;
+$gray-lightest: #f7f7f9;
+
+// Reassign color vars to semantic color scheme
+$brand-primary: $red;
+$brand-success: $green;
+$brand-info: $teal;
+$brand-warning: $orange;
+$brand-danger: $red;
+$brand-inverse: $gray-dark;

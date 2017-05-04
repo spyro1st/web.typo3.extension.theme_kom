@@ -1,0 +1,11 @@
+themes.languages {
+	available =
+	mode = fallback
+	default {
+		label = Deutsch
+		isoCode = de_DE
+		isoCodeShort = de
+		isoCodeHtml = de-de
+		flag = de
+	}
+}

@@ -1,8 +1,8 @@
 mod.web_layout.BackendLayouts {
-	Content {
-		icon = EXT:theme_kom/Resources/Public/Icons/BackendLayouts/Content.png
-		name = LLL:EXT:theme_kom/Resources/Private/Language/BackendLayouts.xlf:content
-		title = LLL:EXT:theme_kom/Resources/Private/Language/BackendLayouts.xlf:content
+	ContentStart {
+		icon = EXT:theme_kom/Resources/Public/Icons/BackendLayouts/ContentStart.png
+		name = LLL:EXT:theme_kom/Resources/Private/Language/BackendLayouts.xlf:content_start
+		title = LLL:EXT:theme_kom/Resources/Private/Language/BackendLayouts.xlf:content_start
 		config {
 			backend_layout {
 				colCount = 1

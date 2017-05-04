@@ -1,6 +1,6 @@
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en" xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
-	<f:layout name="Default"/>
-	<!-- theme_kom: Templates/Theme/Content.html [begin] -->
+	<f:layout name="Start"/>
+	<!-- theme_kom: Templates/Theme/ContentStart.html [begin] -->
 	<f:section name="Default">
 
 		<div class="content__main--wrapper">
@@ -23,11 +23,12 @@
 				</main>
 			</div>
 		</div>
+
 	</f:section>
 
 	<f:section name="Footer">
+		<f:render partial="Area/Footer/General" section="Default" arguments="{_all}"/>
 	</f:section>
 
-	<!-- theme_kom: Templates/Theme/Content.html [end] -->
-
+	<!-- theme_kom: Templates/Theme/ContentStart.html [end] -->
 </div>

@@ -1,0 +1,18 @@
+select {
+  -webkit-appearance: none;
+}
+
+.select-wrap {
+  position: relative;
+
+  &:after {
+    @extend .fi:before;
+    @extend .flaticon-arrow2-o:before;
+    position: absolute;
+    top: 50%;
+    right: $spacer-x;
+    bottom: 50%;
+    color: $body-color;
+    transform: rotate(90deg);
+  }
+}

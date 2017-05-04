@@ -1,7 +1,7 @@
 lib.header.logo {
 	main = IMAGE
 	main {
-		file = EXT:theme_kom/Resources/Public/Images/Frontend/logo-kom.svg
+		file = EXT:theme_kom/Resources/Public/Images/Frontend/logo-lpb.png
 		params = class="img-fluid"
 		titleText.data = LLL:EXT:theme_kom/Resources/Private/Language/locallang.xlf:header.logo.titletext
 		altText.data = LLL:EXT:theme_kom/Resources/Private/Language/locallang.xlf:header.logo.alttext
@@ -12,13 +12,7 @@ lib.header.logo {
 				parameter.insertData = 1
 				title.data = LLL:EXT:theme_kom/Resources/Private/Language/locallang.xlf:header.logo.sitename
 				forceAbsoluteUrl = 1
-				ATagParams = class="logo-main"
 			}
 		}
-	}
-	mobile < .main
-	mobile {
-		file = EXT:theme_kom/Resources/Public/Images/Frontend/logo-kom-mini.png
-		stdWrap.typolink.ATagParams = class="logo-mobile hidden-md-up"
 	}
 }

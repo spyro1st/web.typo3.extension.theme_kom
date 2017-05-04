@@ -1,0 +1,9 @@
+.navbar {
+  &.bg-primary {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, .4);
+  }
+}
+
+.navbar-brand {
+  font-weight: 300;
+}

@@ -1,0 +1,21 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.content__main--wrapper {
+  flex: 1;
+}
+
+.footer-main {
+  border-top: 1px solid rgba(255, 255, 255, .1);
+  
+  a {
+    color: $white-lightest;
+  }
+  
+  .nav-link {
+    padding: .5em 0;
+  }
+}
