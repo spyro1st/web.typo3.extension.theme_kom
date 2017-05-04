@@ -70,6 +70,7 @@ gulp.task('scripts', function () {
 	gulp.src([
 		'./Resources/Private/Vendor/tether/dist/js/tether.js',
 		'./Resources/Private/Vendor/bootstrap/dist/js/bootstrap.js',
+		'./Resources/Private/Vendor/viewport-units-buggyfill/viewport-units-buggyfill.js',
 		'./Resources/Public/JavaScripts/KandidatOMat.js'
 	])
 		.pipe(plumber(plumberErrorHandler))
