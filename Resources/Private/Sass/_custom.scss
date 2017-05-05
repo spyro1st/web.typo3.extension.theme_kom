@@ -44,9 +44,15 @@ $purple: #613d7c;
 // Create grayscale
 $gray-dark: #292b2c;
 $gray: #464a4c;
-$gray-light: #636c72;
+$gray-light: rgb(196, 196, 196);
 $gray-lighter: #eceeef;
 $gray-lightest: #f7f7f9;
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg: rgb(243, 243, 244);
 
 // Reassign color vars to semantic color scheme
 $brand-primary: $red;
@@ -55,6 +61,14 @@ $brand-info: $teal;
 $brand-warning: $orange;
 $brand-danger: $red;
 $brand-inverse: $gray-dark;
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background and border color.
+
+$btn-secondary-color: $gray-dark;
+$btn-secondary-bg: $white;
+$btn-secondary-border: #cccccc;
 
 // Close
 

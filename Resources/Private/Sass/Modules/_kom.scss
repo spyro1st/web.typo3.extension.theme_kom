@@ -1,0 +1,28 @@
+.thesis-balloon {
+  position: relative;
+  padding: $spacer-y $spacer-x;
+  margin-bottom: calc(25px + #{$spacer-y});
+  border: 8px solid $gray-light;
+  
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    left: 30px;
+    width: 0;
+    height: 0;
+    border: 25px solid;
+    border-color: $gray-light transparent transparent $gray-light;
+  }
+  
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: 38px;
+    width: 0;
+    height: 0;
+    border: 15px solid;
+    border-color: $gray-lightest transparent transparent $gray-lightest;
+  }
+}

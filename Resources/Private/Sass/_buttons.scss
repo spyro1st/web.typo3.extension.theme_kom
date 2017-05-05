@@ -1,0 +1,24 @@
+.btn {
+  white-space: normal;
+}
+
+.btn-secondary {
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, .3);
+  
+  i {
+    width: 45px;
+    height: 45px;
+    padding: .6rem;
+    margin-left: auto;
+    border: 1px solid $gray-dark;
+    border-radius: 50%;
+    
+    &.flaticon-check {
+      color: $green;
+    }
+
+    &.flaticon-cancel {
+      color: $red;
+    }
+  }
+}
