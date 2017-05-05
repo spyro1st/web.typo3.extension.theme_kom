@@ -1,11 +1,11 @@
 .layout-start {
-  color: $white;
   background: $brand-primary;
 
   .content__main--wrapper {
     display: flex;
     flex: 1;
     align-items: center;
+    color: $white;
   }
 
   .content__main {

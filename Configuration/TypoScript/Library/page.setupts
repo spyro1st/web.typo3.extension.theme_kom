@@ -220,7 +220,16 @@ page {
 				pagets__ContentStart.value = ContentStart
 				pagets__Content = TEXT 
 				pagets__Content.value = Content
+				pagets__Blank = TEXT 
+				pagets__Blank.value = Blank
 			}
+		}
+		settings {
+			startsitePID = {$themes.configuration.pages.startsite}
+			faqPID = {$themes.configuration.pages.faq}
+			imprintPID = {$themes.configuration.pages.imprint}
+			privacyPID = {$themes.configuration.pages.privacy}
+			cookiePID = {$themes.configuration.pages.cookie}
 		}
 		layoutRootPaths {
 			10 = EXT:theme_kom/Resources/Private/Layouts
@@ -232,4 +241,16 @@ page {
 			10 = EXT:theme_kom/Resources/Private/Partials
 		}
 	}
+}
+
+modal = PAGE
+modal {
+	config {
+		disableAllHeaderCode = 1
+		disablePrefixComment = 1
+	}
+
+	typeNum = 1493968269
+
+	10 < page.10
 }

@@ -1,22 +1,23 @@
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en" xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+	<!-- theme_kom: Partials/Area/Footer/General.html [begin] -->
 	<f:section name="Default">
-		<!-- theme_kom: Partials/Area/Footer/General.html [begin] -->
-
 		<footer class="footer-main py-2">
 			<div class="container">
 				<div class="row align-items-start justify-content-between">
 					<div class="col">
 						<f:link.page
-							pageUid="1"
-							class="nav-link"
+							pageUid="{settings.faqPID}"
+							pageType="1493968269"
+							class="nav-link modal-link"
 						>
 							{f:translate(key:'LLL:EXT:theme_kom/Resources/Private/Language/locallang.xlf:menu.faq')}
 						</f:link.page>
 					</div>
 					<div class="col text-right">
 						<f:link.page
-							pageUid="1"
-							class="nav-link"
+							pageUid="{settings.imprintPID}"
+							pageType="1493968269"
+							class="nav-link modal-link"
 						>
 							{f:translate(key:'LLL:EXT:theme_kom/Resources/Private/Language/locallang.xlf:menu.imprint')}
 						</f:link.page>
@@ -24,7 +25,6 @@
 				</div>
 			</div>
 		</footer>
-
-		<!-- theme_kom: Partials/Area/Footer/General.html [end] -->
 	</f:section>
+	<!-- theme_kom: Partials/Area/Footer/General.html [end] -->
 </div>

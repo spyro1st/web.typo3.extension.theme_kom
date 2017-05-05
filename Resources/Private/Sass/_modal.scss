@@ -1,0 +1,22 @@
+.modal {
+  &.fullscreen {
+    @include media-breakpoint-down(xs) {
+      .container {
+        width: 100%;
+      }
+    }
+
+    .modal-dialog {
+      max-width: 100%;
+      min-height: 100%;
+      margin: 0;
+      color: $white;
+      background: $brand-primary;
+    }
+    
+    .modal-content {
+      background: transparent;
+      border: 0;
+    }
+  }
+}

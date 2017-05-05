@@ -4766,13 +4766,13 @@ button.list-group-item-danger.active {
   font-size: 1.5rem;
   font-weight: bold;
   line-height: 1;
-  color: #000000;
-  text-shadow: 0 1px 0 #ffffff;
+  color: #ffffff;
+  text-shadow: none;
   opacity: .5;
 }
 
 .close:focus, .close:hover {
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
   cursor: pointer;
   opacity: .75;
@@ -8437,6 +8437,33 @@ select {
       transform: rotate(90deg);
 }
 
+@media (max-width: 575px) {
+  .modal.fullscreen .container {
+    width: 100%;
+  }
+}
+
+.modal.fullscreen .modal-dialog {
+  max-width: 100%;
+  min-height: 100%;
+  margin: 0;
+  color: #ffffff;
+  background: #b5181f;
+}
+
+.modal.fullscreen .modal-content {
+  background: transparent;
+  border: 0;
+}
+
+.close {
+  opacity: 1;
+}
+
+.close:focus, .close:hover {
+  opacity: .75;
+}
+
 body {
   display: -ms-flexbox;
   display: flex;
@@ -8463,7 +8490,6 @@ body {
 }
 
 .layout-start {
-  color: #ffffff;
   background: #b5181f;
 }
 
@@ -8474,6 +8500,7 @@ body {
       flex: 1;
   -ms-flex-align: center;
       align-items: center;
+  color: #ffffff;
 }
 
 .layout-start .content__main {

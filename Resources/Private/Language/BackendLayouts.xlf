@@ -1,33 +1,37 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-    <file source-language="en" datatype="plaintext" original="messages" date="2013-09-19T09:11:39Z" product-name="themes_gridelements">
-        <header/>
-        <body>
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-09-19T09:11:39Z"
+		  product-name="themes_gridelements">
+		<header/>
+		<body>
 
-            <trans-unit id="default">
-                <source>Default</source>
-            </trans-unit>
+			<trans-unit id="default">
+				<source>Default</source>
+			</trans-unit>
 
-            <trans-unit id="content">
-                <source>Content</source>
-            </trans-unit>
-            <trans-unit id="content_start">
-                <source>Content Start</source>
-            </trans-unit>
+			<trans-unit id="content">
+				<source>Content</source>
+			</trans-unit>
+			<trans-unit id="content_start">
+				<source>Content Start</source>
+			</trans-unit>
+			<trans-unit id="blank">
+				<source>Blank</source>
+			</trans-unit>
 
-            <trans-unit id="area_feature">
-                <source>Feature</source>
-            </trans-unit>
-            <trans-unit id="area_content">
-                <source>Content</source>
-            </trans-unit>
-            <trans-unit id="area_extended">
-                <source>Extended</source>
-            </trans-unit>
-            <trans-unit id="area_unused">
-                <source>Unused Elements</source>
-            </trans-unit>
+			<trans-unit id="area_feature">
+				<source>Feature</source>
+			</trans-unit>
+			<trans-unit id="area_content">
+				<source>Content</source>
+			</trans-unit>
+			<trans-unit id="area_extended">
+				<source>Extended</source>
+			</trans-unit>
+			<trans-unit id="area_unused">
+				<source>Unused Elements</source>
+			</trans-unit>
 
-        </body>
-    </file>
+		</body>
+	</file>
 </xliff>

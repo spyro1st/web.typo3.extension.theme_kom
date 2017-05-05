@@ -49,6 +49,11 @@ $TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT'] = array(
                     'type' => 0,
                 )
             ),
+            'modal.html' => array(
+                'keyValues' => array(
+                    'type' => 1493968269,
+                ),
+            ),
         ),
     ),
 );

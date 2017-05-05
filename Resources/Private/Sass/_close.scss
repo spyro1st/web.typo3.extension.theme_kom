@@ -1,0 +1,7 @@
+.close {
+  opacity: 1;
+
+  @include hover-focus {
+    opacity: .75;
+  }
+}
