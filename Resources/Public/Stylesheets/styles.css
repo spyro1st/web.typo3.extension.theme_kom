@@ -8547,7 +8547,7 @@ body {
 .thesis-balloon {
   position: relative;
   padding: 1rem 1rem;
-  margin-bottom: calc(25px + 1rem);
+  margin-bottom: calc(25px + 6rem);
   border: 8px solid #c4c4c4;
 }
 
@@ -8570,5 +8570,5 @@ body {
   width: 0;
   height: 0;
   border: 15px solid;
-  border-color: #f7f7f9 transparent transparent #f7f7f9;
+  border-color: #f3f3f4 transparent transparent #f3f3f4;
 }

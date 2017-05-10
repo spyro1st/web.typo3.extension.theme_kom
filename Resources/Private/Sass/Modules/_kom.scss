@@ -1,7 +1,7 @@
 .thesis-balloon {
   position: relative;
   padding: $spacer-y $spacer-x;
-  margin-bottom: calc(25px + #{$spacer-y});
+  margin-bottom: calc(25px + #{$spacer-y * 6});
   border: 8px solid $gray-light;
   
   &:before {
@@ -23,6 +23,6 @@
     width: 0;
     height: 0;
     border: 15px solid;
-    border-color: $gray-lightest transparent transparent $gray-lightest;
+    border-color: $body-bg transparent transparent $body-bg;
   }
 }
