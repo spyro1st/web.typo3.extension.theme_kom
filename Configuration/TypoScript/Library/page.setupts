@@ -254,3 +254,7 @@ modal {
 
 	10 < page.10
 }
+
+[applicationContext = Development]
+	config.no_cache = 1
+[end]
