@@ -38,48 +38,63 @@ Creation date: 04/05/2017 17:02
   font-smoothing: antialiased;
 }
 
-.flaticon-arrow:before {
+.flaticon-star-o:before {
   content: "\f100";
 }
 
-.flaticon-twitter:before {
+.flaticon-star:before {
   content: "\f101";
 }
 
-.flaticon-google:before {
+.flaticon-circle:before {
   content: "\f102";
 }
 
-.flaticon-facebook:before {
+.flaticon-arrow:before {
   content: "\f103";
 }
 
-.flaticon-check:before {
+.flaticon-twitter:before {
   content: "\f104";
 }
 
-.flaticon-cancel:before {
+.flaticon-google:before {
   content: "\f105";
 }
 
-.flaticon-minus:before {
+.flaticon-facebook:before {
   content: "\f106";
 }
 
-.flaticon-arrow2:before {
+.flaticon-check:before {
   content: "\f107";
 }
 
-.flaticon-arrow2-o:before {
+.flaticon-cancel:before {
   content: "\f108";
 }
 
-$font-Flaticon-arrow: "\f100";
-$font-Flaticon-twitter: "\f101";
-$font-Flaticon-google: "\f102";
-$font-Flaticon-facebook: "\f103";
-$font-Flaticon-check: "\f104";
-$font-Flaticon-cancel: "\f105";
-$font-Flaticon-minus: "\f106";
-$font-Flaticon-arrow2: "\f107";
-$font-Flaticon-arrow2-o: "\f108";
+.flaticon-minus:before {
+  content: "\f109";
+}
+
+.flaticon-arrow2:before {
+  content: "\f10a";
+}
+
+.flaticon-arrow2-o:before {
+  content: "\f10b";
+}
+
+$font-Flaticon-star-o: "\f100";
+$font-Flaticon-star: "\f101";
+$font-Flaticon-circle: "\f102";
+$font-Flaticon-arrow: "\f103";
+$font-Flaticon-twitter: "\f104";
+$font-Flaticon-google: "\f105";
+$font-Flaticon-facebook: "\f106";
+$font-Flaticon-check: "\f107";
+$font-Flaticon-cancel: "\f108";
+$font-Flaticon-minus: "\f109";
+$font-Flaticon-arrow2: "\f10a";
+$font-Flaticon-arrow2-o: "\f10b";
