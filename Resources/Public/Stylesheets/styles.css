@@ -8436,6 +8436,10 @@ small,
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.4);
 }
 
+.navbar.bg-primary a {
+  color: #ffffff;
+}
+
 .navbar-brand {
   font-weight: 300;
 }
@@ -8560,6 +8564,17 @@ body {
   margin-bottom: 0;
 }
 
+.flaticon-arrow2-reverse:before {
+  -ms-transform: rotate(180deg);
+      transform: rotate(180deg);
+}
+
+.unstyled {
+  color: #ffffff;
+  background: none;
+  border: 0;
+}
+
 .thesis-balloon {
   position: relative;
   padding: 1rem 1rem;
@@ -8597,7 +8612,30 @@ body {
   cursor: pointer;
 }
 
-.thesis-emphasize i {
+.thesis-emphasize .emphasize-toggle {
+  opacity: 0;
+  transition: all .2s;
+}
+
+.thesis-emphasize .emphasize-indicator {
+  color: #ffd500;
+  opacity: 0;
+  transition: all .2s;
+}
+
+.thesis-emphasize .emphasize-indicator small {
+  color: #ffd500;
+}
+
+.thesis-emphasize.active .emphasize-toggle {
+  opacity: 1;
+}
+
+.thesis-emphasize.emphasized .emphasize-indicator {
+  opacity: 1;
+}
+
+.thesis-emphasize .opinion-wrap i {
   width: 45px;
   height: 45px;
   padding: .6rem;
@@ -8607,11 +8645,11 @@ body {
   border-radius: 50%;
 }
 
-.thesis-emphasize i.flaticon-check {
+.thesis-emphasize .opinion-wrap i.flaticon-check {
   color: #5cb85c;
 }
 
-.thesis-emphasize i.flaticon-cancel {
+.thesis-emphasize .opinion-wrap i.flaticon-cancel {
   color: #b5181f;
 }
 

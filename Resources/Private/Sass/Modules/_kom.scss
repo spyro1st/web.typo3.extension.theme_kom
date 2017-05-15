@@ -1,3 +1,13 @@
+.flaticon-arrow2-reverse:before {
+  transform: rotate(180deg);
+}
+
+.unstyled {
+  color: $white;
+  background: none;
+  border: 0;
+}
+
 .thesis-balloon {
   position: relative;
   padding: $spacer-y $spacer-x;
@@ -35,8 +45,35 @@
 
 .thesis-emphasize {
   cursor: pointer;
+  
+  .emphasize-toggle {
+    opacity: 0;
+    transition: all .2s;
+  }
+  
+  .emphasize-indicator {
+    color: $yellow;
+    opacity: 0;
+    transition: all .2s;
+    
+    small {
+      color: $yellow;
+    }
+  }
+  
+  &.active {
+    .emphasize-toggle {
+      opacity: 1;
+    }
+  }
 
-  i {
+  &.emphasized {
+    .emphasize-indicator {
+      opacity: 1;
+    }
+  }
+
+  .opinion-wrap i {
     width: 45px;
     height: 45px;
     padding: .6rem;

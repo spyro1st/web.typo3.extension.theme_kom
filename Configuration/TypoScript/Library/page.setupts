@@ -222,6 +222,8 @@ page {
 				pagets__Content.value = Content
 				pagets__Blank = TEXT 
 				pagets__Blank.value = Blank
+				pagets__Extension = TEXT 
+				pagets__Extension.value = Extension
 			}
 		}
 		settings {

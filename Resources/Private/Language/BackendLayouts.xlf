@@ -18,6 +18,9 @@
 			<trans-unit id="blank">
 				<source>Blank</source>
 			</trans-unit>
+			<trans-unit id="extension">
+				<source>Extension</source>
+			</trans-unit>
 
 			<trans-unit id="area_feature">
 				<source>Feature</source>

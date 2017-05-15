@@ -18,4 +18,12 @@ $(document).ready(function(){
 		return false;
 
 	});
+
+	$('.thesis-collapse').on('hide.bs.collapse show.bs.collapse', function () {
+		$(this).prev().toggleClass('active');
+	})
+	
+	$('.emphasize-toggle input[type=checkbox]').on('change', function() {
+		$(this).parents('.thesis-emphasize').toggleClass('emphasized');
+	});
 });
