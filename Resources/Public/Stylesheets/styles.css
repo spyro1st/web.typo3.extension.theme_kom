@@ -8336,7 +8336,7 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 
 /*
 Flaticon icon font: Flaticon
-Creation date: 04/05/2017 17:02
+Creation date: 17/05/2017 15:26
 */
 @font-face {
   font-family: "Flaticon";
@@ -8370,8 +8370,7 @@ Creation date: 04/05/2017 17:02
   font-smoothing: antialiased;
 }
 
-.flaticon-star-o:before, .checkbox-star[type="checkbox"]:not(:checked) + label:before,
-.checkbox-star[type="checkbox"]:checked + label:before {
+.flaticon-compare:before {
   content: "\f100";
 }
 
@@ -8380,44 +8379,49 @@ Creation date: 04/05/2017 17:02
   content: "\f101";
 }
 
-.flaticon-circle:before {
+.flaticon-facebook:before {
   content: "\f102";
 }
 
-.flaticon-arrow:before {
+.flaticon-star-o:before, .checkbox-star[type="checkbox"]:not(:checked) + label:before,
+.checkbox-star[type="checkbox"]:checked + label:before {
   content: "\f103";
 }
 
-.flaticon-twitter:before {
+.flaticon-google:before {
   content: "\f104";
 }
 
-.flaticon-google:before {
+.flaticon-arrow2:before {
   content: "\f105";
 }
 
-.flaticon-facebook:before {
+.flaticon-cancel:before {
   content: "\f106";
 }
 
-.flaticon-check:before {
+.flaticon-minus:before {
   content: "\f107";
 }
 
-.flaticon-cancel:before {
+.flaticon-arrow:before {
   content: "\f108";
 }
 
-.flaticon-minus:before {
+.flaticon-arrow2-o:before, .select-wrap:after {
   content: "\f109";
 }
 
-.flaticon-arrow2:before {
+.flaticon-check:before {
   content: "\f10a";
 }
 
-.flaticon-arrow2-o:before, .select-wrap:after {
+.flaticon-twitter:before {
   content: "\f10b";
+}
+
+.flaticon-circle:before {
+  content: "\f10c";
 }
 
 body {
@@ -8540,6 +8544,13 @@ select {
   background-color: #e6e6e6;
   background-image: none;
   border-color: #7f1116;
+}
+
+@media (max-width: 575px) {
+  .btn-block-xs {
+    display: block;
+    width: 100%;
+  }
 }
 
 body {

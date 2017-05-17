@@ -16,3 +16,10 @@
   @include button-size($btn-padding-x, $btn-padding-x, $font-size-lg, $btn-border-radius-lg);
   box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, .3);
 }
+
+@include media-breakpoint-down(xs) {
+  .btn-block-xs {
+    display: block;
+    width: 100%;
+  }
+}

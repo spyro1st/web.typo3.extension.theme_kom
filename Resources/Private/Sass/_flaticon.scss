@@ -1,8 +1,6 @@
-// scss-lint:disable all
-
 /*
 Flaticon icon font: Flaticon
-Creation date: 04/05/2017 17:02
+Creation date: 17/05/2017 15:26
 */
 
 @font-face {
@@ -38,7 +36,7 @@ Creation date: 04/05/2017 17:02
   font-smoothing: antialiased;
 }
 
-.flaticon-star-o:before {
+.flaticon-compare:before {
   content: "\f100";
 }
 
@@ -46,55 +44,60 @@ Creation date: 04/05/2017 17:02
   content: "\f101";
 }
 
-.flaticon-circle:before {
+.flaticon-facebook:before {
   content: "\f102";
 }
 
-.flaticon-arrow:before {
+.flaticon-star-o:before {
   content: "\f103";
 }
 
-.flaticon-twitter:before {
+.flaticon-google:before {
   content: "\f104";
 }
 
-.flaticon-google:before {
+.flaticon-arrow2:before {
   content: "\f105";
 }
 
-.flaticon-facebook:before {
+.flaticon-cancel:before {
   content: "\f106";
 }
 
-.flaticon-check:before {
+.flaticon-minus:before {
   content: "\f107";
 }
 
-.flaticon-cancel:before {
+.flaticon-arrow:before {
   content: "\f108";
 }
 
-.flaticon-minus:before {
+.flaticon-arrow2-o:before {
   content: "\f109";
 }
 
-.flaticon-arrow2:before {
+.flaticon-check:before {
   content: "\f10a";
 }
 
-.flaticon-arrow2-o:before {
+.flaticon-twitter:before {
   content: "\f10b";
 }
 
-$font-Flaticon-star-o: "\f100";
+.flaticon-circle:before {
+  content: "\f10c";
+}
+
+$font-Flaticon-compare: "\f100";
 $font-Flaticon-star: "\f101";
-$font-Flaticon-circle: "\f102";
-$font-Flaticon-arrow: "\f103";
-$font-Flaticon-twitter: "\f104";
-$font-Flaticon-google: "\f105";
-$font-Flaticon-facebook: "\f106";
-$font-Flaticon-check: "\f107";
-$font-Flaticon-cancel: "\f108";
-$font-Flaticon-minus: "\f109";
-$font-Flaticon-arrow2: "\f10a";
-$font-Flaticon-arrow2-o: "\f10b";
+$font-Flaticon-facebook: "\f102";
+$font-Flaticon-star-o: "\f103";
+$font-Flaticon-google: "\f104";
+$font-Flaticon-arrow2: "\f105";
+$font-Flaticon-cancel: "\f106";
+$font-Flaticon-minus: "\f107";
+$font-Flaticon-arrow: "\f108";
+$font-Flaticon-arrow2-o: "\f109";
+$font-Flaticon-check: "\f10a";
+$font-Flaticon-twitter: "\f10b";
+$font-Flaticon-circle: "\f10c";
