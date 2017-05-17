@@ -44,23 +44,22 @@
 }
 
 .thesis-emphasize {
-  cursor: pointer;
-  
+
   .emphasize-toggle {
     opacity: 0;
     transition: all .2s;
   }
-  
+
   .emphasize-indicator {
     color: $yellow;
     opacity: 0;
     transition: all .2s;
-    
+
     small {
       color: $yellow;
     }
   }
-  
+
   &.active {
     .emphasize-toggle {
       opacity: 1;
@@ -72,24 +71,36 @@
       opacity: 1;
     }
   }
+}
 
-  .opinion-wrap i {
-    width: 45px;
-    height: 45px;
-    padding: .6rem;
-    margin-left: auto;
-    text-align: center;
-    border: 1px solid $gray-light;
-    border-radius: 50%;
+.collapse-header {
+  cursor: pointer;
+}
 
-    &.flaticon-check {
-      color: $green;
-    }
+.opinion-wrap i {
+  width: 45px;
+  height: 45px;
+  padding: .6rem;
+  margin-left: auto;
+  text-align: center;
+  border: 1px solid $gray-light;
+  border-radius: 50%;
 
-    &.flaticon-cancel {
-      color: $red;
-    }
+  &.flaticon-check {
+    color: $green;
   }
+
+  &.flaticon-cancel {
+    color: $red;
+  }
+}
+
+.check {
+  color: $green;
+}
+
+.cancel {
+  color: $red;
 }
 
 // Base for label styling

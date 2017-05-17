@@ -8608,10 +8608,6 @@ body {
   color: #c4c4c4;
 }
 
-.thesis-emphasize {
-  cursor: pointer;
-}
-
 .thesis-emphasize .emphasize-toggle {
   opacity: 0;
   transition: all .2s;
@@ -8635,7 +8631,11 @@ body {
   opacity: 1;
 }
 
-.thesis-emphasize .opinion-wrap i {
+.collapse-header {
+  cursor: pointer;
+}
+
+.opinion-wrap i {
   width: 45px;
   height: 45px;
   padding: .6rem;
@@ -8645,11 +8645,19 @@ body {
   border-radius: 50%;
 }
 
-.thesis-emphasize .opinion-wrap i.flaticon-check {
+.opinion-wrap i.flaticon-check {
   color: #5cb85c;
 }
 
-.thesis-emphasize .opinion-wrap i.flaticon-cancel {
+.opinion-wrap i.flaticon-cancel {
+  color: #b5181f;
+}
+
+.check {
+  color: #5cb85c;
+}
+
+.cancel {
   color: #b5181f;
 }
 
