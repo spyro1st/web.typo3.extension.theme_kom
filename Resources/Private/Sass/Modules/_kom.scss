@@ -116,6 +116,11 @@
   img {
     border: 3px solid $gray-lighter;
   }
+  
+  .result-percentage {
+    font-size: $font-size-h3;
+    color: $red;
+  }
 }
 
 .carousel-navigation {

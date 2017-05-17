@@ -8689,6 +8689,11 @@ body {
   border: 3px solid #eceeef;
 }
 
+.result-list .result-percentage {
+  font-size: 1.75rem;
+  color: #b5181f;
+}
+
 .carousel-navigation a {
   color: #292b2c;
 }
