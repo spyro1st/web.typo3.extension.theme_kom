@@ -5847,11 +5847,11 @@ $(document).ready(function () {
 		$(this).parents('.thesis-emphasize').toggleClass('emphasized');
 	});
 
-	$(".carousel").swipe(
+	$(".carousel .thesis-balloon").swipe(
 		{
 			swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-				if (direction == 'left') $(this).carousel('next');
-				if (direction == 'right') $(this).carousel('prev');
+				if (direction == 'left') $(this).parents('.carousel').carousel('next');
+				if (direction == 'right') $(this).parents('.carousel').carousel('prev');
 			},
 			allowPageScroll: "vertical"
 		}

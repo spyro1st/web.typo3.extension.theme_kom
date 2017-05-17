@@ -1,5 +1,10 @@
 .modal {
   &.fullscreen {
+    @include media-breakpoint-down(xs) {
+      .container {
+        width: 100%;
+      }
+    }
 
     .modal-dialog {
       max-width: 100%;

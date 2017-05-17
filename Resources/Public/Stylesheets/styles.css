@@ -8440,6 +8440,13 @@ small,
   color: #ffffff;
 }
 
+@media (max-width: 575px) {
+  .navbar .container {
+    width: 100%;
+    padding: 0;
+  }
+}
+
 .navbar-brand {
   font-weight: 300;
 }
@@ -8461,6 +8468,12 @@ select {
   color: #292b2c;
   -ms-transform: rotate(90deg);
       transform: rotate(90deg);
+}
+
+@media (max-width: 575px) {
+  .modal.fullscreen .container {
+    width: 100%;
+  }
 }
 
 .modal.fullscreen .modal-dialog {
@@ -8628,7 +8641,6 @@ body {
 }
 
 .thesis-emphasize .emphasize-toggle {
-  opacity: 0;
   transition: all .2s;
 }
 
@@ -8762,10 +8774,4 @@ body {
   opacity: 0;
   -ms-transform: scale(0);
       transform: scale(0);
-}
-
-@media (max-width: 575px) {
-  .container {
-    width: 100%;
-  }
 }
