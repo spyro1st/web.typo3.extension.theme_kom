@@ -68,6 +68,7 @@ gulp.task('imagemin', function () {
 
 gulp.task('scripts', function () {
 	gulp.src([
+		'./Resources/Public/JavaScripts/jquery.touchSwipe.min.js',
 		'./Resources/Private/Vendor/tether/dist/js/tether.js',
 		'./Resources/Private/Vendor/bootstrap/dist/js/bootstrap.js',
 		'./Resources/Private/Vendor/viewport-units-buggyfill/viewport-units-buggyfill.js',

@@ -17,3 +17,9 @@
 @import "Modules/footer";
 @import "Modules/start";
 @import "Modules/kom";
+
+@include media-breakpoint-down(xs) {
+  .container {
+    width: 100%;
+  }
+}

@@ -4,21 +4,15 @@
 
 .btn-secondary {
   box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, .3);
-  
-  i {
-    width: 45px;
-    height: 45px;
-    padding: .6rem;
-    margin-left: auto;
-    border: 1px solid $gray-light;
-    border-radius: 50%;
-    
-    &.flaticon-check {
-      color: $green;
-    }
 
-    &.flaticon-cancel {
-      color: $red;
-    }
+  .opinion-wrap {
+    padding: .344rem .5rem;
+    margin-left: auto;
   }
+}
+
+.btn-inverted {
+  @include button-variant($btn-primary-bg, $btn-primary-color, $btn-primary-border);
+  @include button-size($btn-padding-x, $btn-padding-x, $font-size-lg, $btn-border-radius-lg);
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, .3);
 }
