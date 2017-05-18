@@ -5860,5 +5860,7 @@ $(document).ready(function () {
 	$('#theses-carousel').on('slid.bs.carousel', function () {
 		currentIndex = $('div.active').index() + 1;
 		$('.current-number', this).html(currentIndex);
+		$('.thesis-detail-wrap').removeClass('active');
+		$('#theses-detail-' + currentIndex).addClass('active');
 	});
 });

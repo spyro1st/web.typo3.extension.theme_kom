@@ -8,14 +8,97 @@
 
 .unstyled {
   color: $white;
+  cursor: pointer;
   background: none;
   border: 0;
+}
+
+.skip-thesis {
+  padding: 0;
+  margin: 0;
+  font-weight: 300;
+  color: $gray;
+  background: none;
+  border: 0;
+}
+
+.carousel-item .thesis-balloon {
+  margin-bottom: calc(25px + #{$spacer-y * 3});
+}
+
+@include media-breakpoint-up(md) {
+  .carousel-item .thesis-balloon {
+    margin-top: calc(25px + #{$spacer-y * 1});
+  }
+  
+  .theses-counter {
+    position: absolute;
+    top: $spacer-y * 1;
+    right: 0;
+  }
+}
+
+.thesis-balloon-wrap {
+  margin-bottom: calc(25px + #{$spacer-y * 6});
+
+  @include media-breakpoint-up(md) {
+    margin-top: calc(25px + #{$spacer-y * 6});
+  }
+}
+
+.thesis-control-prev,
+.thesis-control-next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+  text-align: center;
+
+  @include hover-focus {
+    text-decoration: none;
+    outline: 0;
+    opacity: $carousel-control-opacity;
+  }
+  
+  .unstyled {
+    padding: 0;
+    margin: 0;
+    color: $link-color;
+  }
+}
+
+.thesis-control-prev {
+  left: -1rem;
+}
+
+.thesis-control-next {
+  right: -1rem;
+}
+
+.desktop-thesis-control-wrap {
+  position: relative;
+
+  .thesis-control-prev,
+  .thesis-control-next {
+    margin-top: -25px;
+  }
+
+  .thesis-control-prev {
+    left: -2rem;
+  }
+
+  .thesis-control-next {
+    right: -2rem;
+  }
 }
 
 .thesis-balloon {
   position: relative;
   padding: $spacer-y $spacer-x;
-  margin-bottom: calc(25px + #{$spacer-y * 6});
+  margin: $spacer-y / 2 0;
   border: 8px solid $gray-light;
 
   &:before {
@@ -38,6 +121,30 @@
     height: 0;
     border: 1rem solid;
     border-color: $body-bg transparent transparent $body-bg;
+  }
+
+  @include media-breakpoint-up(md) {
+    &:before {
+      content: "";
+      position: absolute;
+      top: -50px;
+      left: 30px;
+      width: 0;
+      height: 0;
+      border: 1.5rem solid;
+      border-color: transparent transparent $gray-light  $gray-light;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: -30px;
+      left: 38px;
+      width: 0;
+      height: 0;
+      border: 1rem solid;
+      border-color: transparent transparent $body-bg  $body-bg;
+    }
   }
 }
 
@@ -120,11 +227,31 @@
     font-size: $font-size-h3;
     color: $red;
   }
+  
+  .percentage-indicator-wrap {
+    position: relative;
+  }
+  
+  .percentage-indicator {
+    position: absolute;
+    right: 0;
+    height: 5px;
+    margin-top: -5px;
+    background: $red;
+  }
 }
 
 .carousel-navigation {
   a {
     color: $body-color;
+  }
+}
+
+.thesis-detail-wrap {
+  display: none;
+  
+  &.active {
+    display: inherit;
   }
 }
 

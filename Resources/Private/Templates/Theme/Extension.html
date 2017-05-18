@@ -2,7 +2,12 @@
 	<f:layout name="Blank"/>
 	<!-- theme_kom: Templates/Theme/Extension.html [begin] -->
 	<f:section name="Default">
-		<f:render partial="Content/Main" section="Default" arguments="{_all}"/>
+		<div class="content__extension--wrapper">
+			<f:render partial="Content/Main" section="Default" arguments="{_all}"/>
+		</div>
+		<div class="hidden-xs-down">
+			<f:render partial="Area/Footer/General" section="Default" arguments="{_all}"/>
+		</div>
 	</f:section>
 
 	<!-- theme_kom: Templates/Theme/Extension.html [end] -->

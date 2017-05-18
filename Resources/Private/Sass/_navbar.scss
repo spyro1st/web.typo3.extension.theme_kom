@@ -16,5 +16,10 @@
 }
 
 .navbar-brand {
+  margin-right: 0;
   font-weight: 300;
+}
+
+.sticky-top {
+  background: $brand-primary;
 }
