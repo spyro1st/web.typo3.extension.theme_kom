@@ -8353,7 +8353,7 @@ Creation date: 17/05/2017 15:26
   }
 }
 
-.fi:before, .select-wrap:after, .checkbox-star[type="checkbox"]:not(:checked) + label:before,
+.fi:before, .select-wrap:after, .collapse-header span:after, .collapse-header.collapsed span:after, .checkbox-star[type="checkbox"]:not(:checked) + label:before,
 .checkbox-star[type="checkbox"]:checked + label:before, .checkbox-star[type="checkbox"]:not(:checked) + label:after,
 .checkbox-star[type="checkbox"]:checked + label:after {
   display: inline-block;
@@ -8408,7 +8408,7 @@ Creation date: 17/05/2017 15:26
   content: "\f108";
 }
 
-.flaticon-arrow2-o:before, .select-wrap:after {
+.flaticon-arrow2-o:before, .select-wrap:after, .collapse-header span:after, .collapse-header.collapsed span:after {
   content: "\f109";
 }
 
@@ -8506,8 +8506,20 @@ select {
   opacity: .75;
 }
 
+button:focus {
+  outline: 0;
+}
+
 .btn {
   white-space: normal;
+}
+
+.btn-primary {
+  box-shadow: 0;
+}
+
+.btn-primary:focus, .btn-primary.focus {
+  color: #ffffff;
 }
 
 .btn-secondary {
@@ -8659,6 +8671,7 @@ body {
   margin: 0;
   font-weight: 300;
   color: #464a4c;
+  cursor: pointer;
   background: none;
   border: 0;
 }
@@ -8824,6 +8837,18 @@ body {
 
 .collapse-header {
   cursor: pointer;
+}
+
+.collapse-header span:after {
+  margin-left: 1rem;
+  -ms-transform: rotate(90deg);
+      transform: rotate(90deg);
+  transition: all .2s;
+}
+
+.collapse-header.collapsed span:after {
+  -ms-transform: rotate(0deg);
+      transform: rotate(0deg);
 }
 
 .opinion-wrap {

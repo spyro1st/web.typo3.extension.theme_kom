@@ -18,6 +18,7 @@
   margin: 0;
   font-weight: 300;
   color: $gray;
+  cursor: pointer;
   background: none;
   border: 0;
 }
@@ -30,7 +31,7 @@
   .carousel-item .thesis-balloon {
     margin-top: calc(25px + #{$spacer-y * 1});
   }
-  
+
   .theses-counter {
     position: absolute;
     top: $spacer-y * 1;
@@ -63,7 +64,7 @@
     outline: 0;
     opacity: $carousel-control-opacity;
   }
-  
+
   .unstyled {
     padding: 0;
     margin: 0;
@@ -133,7 +134,7 @@
       width: 0;
       height: 0;
       border: 1.5rem solid;
-      border-color: transparent transparent $gray-light  $gray-light;
+      border-color: transparent transparent $gray-light $gray-light;
     }
 
     &:after {
@@ -144,7 +145,7 @@
       width: 0;
       height: 0;
       border: 1rem solid;
-      border-color: transparent transparent $body-bg  $body-bg;
+      border-color: transparent transparent $body-bg $body-bg;
     }
   }
 }
@@ -186,6 +187,26 @@
 
 .collapse-header {
   cursor: pointer;
+
+  span {
+    &:after {
+      margin-left: $spacer-x;
+      @extend .fi:before;
+      @extend .flaticon-arrow2-o:before;
+      transform: rotate(90deg);
+      transition: all .2s;
+    }
+  }
+
+  &.collapsed {
+    span {
+      &:after {
+        @extend .fi:before;
+        @extend .flaticon-arrow2-o:before;
+        transform: rotate(0deg);
+      }
+    }
+  }
 }
 
 .opinion-wrap {
@@ -196,7 +217,7 @@
   i {
     width: 2rem;
     height: 2rem;
-    
+
     &:before {
       font-size: $font-size-lg;
       font-weight: bold;
@@ -228,16 +249,16 @@
   img {
     border: 3px solid $gray-lighter;
   }
-  
+
   .result-percentage {
     font-size: $font-size-h3;
     color: $red;
   }
-  
+
   .percentage-indicator-wrap {
     position: relative;
   }
-  
+
   .percentage-indicator {
     position: absolute;
     right: 0;
@@ -255,7 +276,7 @@
 
 .thesis-detail-wrap {
   display: none;
-  
+
   &.active {
     display: inherit;
   }
@@ -338,7 +359,7 @@
 .sharing-link {
   font-weight: 400;
   color: $gray-light;
-  
+
   &:active,
   &:focus,
   &:hover {

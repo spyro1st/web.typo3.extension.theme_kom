@@ -1,5 +1,18 @@
+button:focus {
+  outline: 0;
+}
+
 .btn {
   white-space: normal;
+}
+
+.btn-primary {
+  &:focus,
+  &.focus {
+    color: $btn-primary-color;
+  }
+
+  box-shadow: 0;
 }
 
 .btn-secondary {

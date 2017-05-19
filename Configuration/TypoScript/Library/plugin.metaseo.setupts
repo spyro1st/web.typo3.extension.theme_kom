@@ -1,0 +1,69 @@
+
+[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('metaseo')]
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:metaseo/Configuration/TypoScript/setup.txt">
+[GLOBAL]
+
+page.meta >
+
+plugin.metaseo {
+	# Page metatag generator
+	metaTags =
+	metaTags {
+
+		stdWrap.description.if.isFalse.data = GP:tx_news_pi1|news
+
+		# OpenGraph metatags
+		opengraph {
+			site_name = TEXT
+			site_name {
+				data = TSFE:tmpl|sitetitle
+			}
+
+			title = TEXT
+			title {
+				field = title
+			}
+
+			description = TEXT
+			description {
+				field = description
+			}
+
+			admins >
+			email >
+			phone_number >
+			fax_number >
+			latitude >
+			longitude >
+			street-address >
+			locality >
+			region >
+			postal-code >
+			country-name >
+		}
+	}
+}
+
+[applicationContext = Development,Testing,Staging]
+
+plugin.metaseo {
+	metaTags {
+		robotsIndex = 0
+		robotsFollow = 0
+	}
+	robotsTxt {
+		default {
+			10.value (
+
+User-agent: *
+Disallow: /
+
+			)
+			90.value =
+
+			}
+		}
+	}
+}
+
+[GLOBAL]
