@@ -23,4 +23,8 @@
   display: flex;
   flex: 1;
   flex-direction: column;
+  
+  .content__main {
+    padding-bottom: 5rem;
+  }
 }
