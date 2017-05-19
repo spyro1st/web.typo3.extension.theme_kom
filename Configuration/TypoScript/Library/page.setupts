@@ -95,12 +95,6 @@ page {
 	headerData.186 {
 		5 < linebreak
 
-		6 = TEXT
-		6.dataWrap (
-<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css' />
-		)
-		7 < linebreak
-
 		10 = TEXT
 		10.dataWrap (
 <link href="{path:EXT:theme_kom/Resources/Public/Icons/apple-touch-icon.png}" rel="apple-touch-icon" />
@@ -147,65 +141,6 @@ page {
 		wrap = <link rel="canonical" href="|" />
 	}
 
-	headerData.70 = COA
-	headerData.70 {
-		stdWrap.if.isFalse.data = GP:tx_news_pi1|news
-
-		10 = TEXT
-		10 {
-			value = {$themes.configuration.socialmedia.twitterCard}
-			wrap = <meta property="twitter:card" content="|" />
-		}
-
-		20 = TEXT
-		20 {
-			value = {$themes.configuration.socialmedia.twitterSite}
-			wrap = <meta property="twitter:site" content="|" />
-		}
-
-		30 = TEXT
-		30 {
-			field = title
-			wrap = <meta property="twitter:title" content="|" />
-		}
-
-		40 = FILES
-		40 {
-			references {
-				table = pages
-				uid.data = page:uid
-				fieldName = tx_themekom_socialmedia_image
-			}
-
-			renderObj = TEXT
-			renderObj {
-				typolink {
-					parameter.cObject = IMG_RESOURCE
-					parameter.cObject {
-						file {
-							import.data = file:current:originalUid // file:current:uid
-							width = 640c
-							height = 360c
-							maxWidth = 640
-							maxHeight = 360
-						}
-						stdWrap.required = 1
-						stdWrap.noTrimWrap = |
-					}
-					forceAbsoluteUrl = 1
-					returnLast = url
-				}
-				wrap = <meta property="twitter:image" content="|" />
-			}
-		}
-
-		50 = TEXT
-		50 {
-			field = description
-			wrap = <meta property="twitter:description" content="|" />
-		}
-	}
-	
 	10 = FLUIDTEMPLATE
 	10 {
 		templateName = TEXT 

@@ -10,7 +10,8 @@ plugin.metaseo {
 	metaTags =
 	metaTags {
 
-		stdWrap.description.if.isFalse.data = GP:tx_news_pi1|news
+		stdWrap.title.if.isFalse.data = GP:tx_kom_pi1|step
+		stdWrap.description.if.isFalse.data = GP:tx_kom_pi1|step
 
 		# OpenGraph metatags
 		opengraph {
@@ -27,6 +28,7 @@ plugin.metaseo {
 			description = TEXT
 			description {
 				field = description
+				if.isFalse.data = GP:tx_kom_pi1|step
 			}
 
 			admins >
