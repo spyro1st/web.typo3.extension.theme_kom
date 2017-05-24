@@ -167,6 +167,7 @@ page {
 			imprintPID = {$themes.configuration.pages.imprint}
 			privacyPID = {$themes.configuration.pages.privacy}
 			cookiePID = {$themes.configuration.pages.cookie}
+			googleTagManager = {$themes.configuration.services.googleTagManager}
 		}
 		layoutRootPaths {
 			10 = EXT:theme_kom/Resources/Private/Layouts

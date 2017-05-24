@@ -1,0 +1,14 @@
+# #customcategory=meta=Theme: Meta-Tag settings
+# customsubcategory=meta_default=Default settings
+
+# cat=meta,basic//; type=string; label= Application name
+themes.configuration.meta.applicationName = Kandidat-O-Mat
+
+# cat=meta,basic//; type=string; label= Google Verification
+themes.configuration.meta.googleVerification =
+
+# cat=meta,basic//; type=string; label= Google Analytics Code
+themes.configuration.services.googleAnalytics =
+
+# cat=meta,basic//; type=string; label= Google Tag Manager Code
+themes.configuration.services.googleTagManager = GTM-NG89RVF
