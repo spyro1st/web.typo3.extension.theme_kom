@@ -107,15 +107,19 @@ page {
 <link href="{path:EXT:theme_kom/Resources/Public/Icons/favicon-16x16.png}" rel="icon" type="image/png" sizes="16x16" />
 <link href="{path:EXT:theme_kom/Resources/Public/Icons/favicon-32x32.png}" rel="icon" type="image/png" sizes="32x32" />
 <link href="{path:EXT:theme_kom/Resources/Public/Icons/favicon-96x96.png}" rel="icon" type="image/png" sizes="96x96" />
-
 <link rel="mask-icon" href="{path:EXT:theme_kom/Resources/Public/Icons/safari-pinned-tab.svg}" color="#ff9934">
 <link rel="manifest" href="{path:EXT:theme_kom/Resources/Public/Icons/manifest.json}" />
-
-<meta name="application-name" content="{$themes.configuration.siteName}" />
-<meta name="apple-mobile-web-app-title" content="{$themes.configuration.siteName}" />
-<meta name="msapplication-TileColor" content="{$themes.configuration.siteColor}" />
-<meta name="theme-color" content="{$themes.configuration.siteColor}" />
 		)
+		11 <linebreak
+		12 = TEXT
+		12 {
+			typolink {
+				parameter = typo3conf/ext/theme_kom/Resources/Public/Images/Frontend/facebook-share-kom.png
+				returnLast = url
+				forceAbsoluteUrl = 1
+			}
+			wrap = <meta property="og:image" content="|" />
+		}
 		15 <linebreak
 		20 = TEXT
 		20.value (

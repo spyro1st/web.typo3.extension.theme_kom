@@ -40,7 +40,7 @@
 }
 
 .thesis-balloon-wrap {
-  margin-bottom: calc(25px + #{$spacer-y * 3});
+  margin-bottom: calc(25px + #{$spacer-y});
 
   @include media-breakpoint-up(md) {
     margin-top: calc(25px + #{$spacer-y * 6});
@@ -102,6 +102,15 @@
   padding: $spacer-y $spacer-x;
   margin: $spacer-y / 2 0;
   border: 8px solid $gray-light;
+  
+  .content {
+    height: 25vh;
+    overflow-y: scroll;
+
+    @include media-breakpoint-up(md) {
+      height: 10vh;
+    }
+  }
 
   &:before {
     content: "";
@@ -189,10 +198,15 @@
   cursor: pointer;
 
   span {
-    &:after {
-      margin-left: $spacer-x;
+    display: flex;
+    align-items: center;
+    padding-right: $spacer-x;
+
+    &:before {
       @extend .fi:before;
       @extend .flaticon-arrow2-o:before;
+      margin-right: $spacer-x;
+      font-size: $font-size-base;
       transform: rotate(90deg);
       transition: all .2s;
     }
@@ -200,7 +214,7 @@
 
   &.collapsed {
     span {
-      &:after {
+      &:before {
         @extend .fi:before;
         @extend .flaticon-arrow2-o:before;
         transform: rotate(0deg);
@@ -358,12 +372,12 @@
 
 .sharing-link {
   font-weight: 400;
-  color: $gray-light;
+  color: $gray;
 
   &:active,
   &:focus,
   &:hover {
-    color: $gray-dark;
+    color: $gray-light;
     text-decoration: none;
   }
 }

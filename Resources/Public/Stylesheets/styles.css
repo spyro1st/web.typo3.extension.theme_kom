@@ -8353,7 +8353,7 @@ Creation date: 17/05/2017 15:26
   }
 }
 
-.fi:before, .select-wrap:after, .collapse-header span:after, .collapse-header.collapsed span:after, .checkbox-star[type="checkbox"]:not(:checked) + label:before,
+.fi:before, .select-wrap:after, .collapse-header span:before, .collapse-header.collapsed span:before, .checkbox-star[type="checkbox"]:not(:checked) + label:before,
 .checkbox-star[type="checkbox"]:checked + label:before, .checkbox-star[type="checkbox"]:not(:checked) + label:after,
 .checkbox-star[type="checkbox"]:checked + label:after {
   display: inline-block;
@@ -8408,7 +8408,7 @@ Creation date: 17/05/2017 15:26
   content: "\f108";
 }
 
-.flaticon-arrow2-o:before, .select-wrap:after, .collapse-header span:after, .collapse-header.collapsed span:after {
+.flaticon-arrow2-o:before, .select-wrap:after, .collapse-header span:before, .collapse-header.collapsed span:before {
   content: "\f109";
 }
 
@@ -8428,6 +8428,7 @@ body {
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
           hyphens: auto;
+  overflow-wrap: break-word;
 }
 
 small,
@@ -8692,7 +8693,7 @@ body {
 }
 
 .thesis-balloon-wrap {
-  margin-bottom: calc(25px + 3rem);
+  margin-bottom: calc(25px + 1rem);
 }
 
 @media (min-width: 768px) {
@@ -8762,6 +8763,17 @@ body {
   padding: 1rem 1rem;
   margin: 0.5rem 0;
   border: 8px solid #c4c4c4;
+}
+
+.thesis-balloon .content {
+  height: 25vh;
+  overflow-y: scroll;
+}
+
+@media (min-width: 768px) {
+  .thesis-balloon .content {
+    height: 10vh;
+  }
 }
 
 .thesis-balloon:before {
@@ -8839,14 +8851,23 @@ body {
   cursor: pointer;
 }
 
-.collapse-header span:after {
-  margin-left: 1rem;
+.collapse-header span {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  padding-right: 1rem;
+}
+
+.collapse-header span:before {
+  margin-right: 1rem;
+  font-size: 1rem;
   -ms-transform: rotate(90deg);
       transform: rotate(90deg);
   transition: all .2s;
 }
 
-.collapse-header.collapsed span:after {
+.collapse-header.collapsed span:before {
   -ms-transform: rotate(0deg);
       transform: rotate(0deg);
 }
@@ -8992,11 +9013,11 @@ body {
 
 .sharing-link {
   font-weight: 400;
-  color: #c4c4c4;
+  color: #464a4c;
 }
 
 .sharing-link:active, .sharing-link:focus, .sharing-link:hover {
-  color: #292b2c;
+  color: #c4c4c4;
   text-decoration: none;
 }
 
