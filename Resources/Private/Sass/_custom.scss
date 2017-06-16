@@ -51,6 +51,8 @@ $gray-light: rgb(196, 196, 196);
 $gray-lighter: #eceeef;
 $gray-lightest: #f7f7f9;
 
+$body-color: $gray-dark;
+
 // Body
 //
 // Settings for the `<body>` element.
@@ -64,6 +66,15 @@ $brand-info: $teal;
 $brand-warning: $orange;
 $brand-danger: $red;
 $brand-inverse: $gray-dark;
+
+// Links
+//
+// Style anchor elements.
+
+$link-color: $body-color;
+$link-decoration: none;
+$link-hover-color: $brand-primary;
+$link-hover-decoration: none;
 
 // Buttons
 //

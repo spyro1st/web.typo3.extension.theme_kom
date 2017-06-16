@@ -393,13 +393,13 @@ blockquote {
 }
 
 a {
-  color: #b5181f;
+  color: #292b2c;
   text-decoration: none;
 }
 
 a:focus, a:hover {
-  color: #710f13;
-  text-decoration: underline;
+  color: #b5181f;
+  text-decoration: none;
 }
 
 a:not([href]):not([tabindex]) {
@@ -2827,7 +2827,7 @@ fieldset[disabled] a.btn {
 
 .btn-link {
   font-weight: normal;
-  color: #b5181f;
+  color: #292b2c;
   border-radius: 0;
 }
 
@@ -2844,8 +2844,8 @@ fieldset[disabled] a.btn {
 }
 
 .btn-link:focus, .btn-link:hover {
-  color: #710f13;
-  text-decoration: underline;
+  color: #b5181f;
+  text-decoration: none;
   background-color: transparent;
 }
 
@@ -4258,13 +4258,13 @@ tbody.collapse.show {
   padding: 0.5rem 0.75rem;
   margin-left: -1px;
   line-height: 1.25;
-  color: #b5181f;
+  color: #292b2c;
   background-color: #ffffff;
   border: 1px solid #ddd;
 }
 
 .page-link:focus, .page-link:hover {
-  color: #710f13;
+  color: #b5181f;
   text-decoration: none;
   background-color: #eceeef;
   border-color: #ddd;
@@ -8437,6 +8437,13 @@ small,
   color: rgba(255, 255, 255, 0.8);
 }
 
+@media (max-width: 575px) {
+  h2,
+  .h2 {
+    font-size: 1rem;
+  }
+}
+
 .navbar.bg-primary {
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.4);
 }
@@ -8507,8 +8514,16 @@ select {
   opacity: .75;
 }
 
+button {
+  transition: all .2s;
+}
+
 button:focus {
   outline: 0;
+}
+
+button:hover {
+  color: #b5181f;
 }
 
 .btn {
@@ -8528,7 +8543,8 @@ button:focus {
 }
 
 .btn-secondary .opinion-wrap {
-  padding: .344rem .5rem;
+  display: inherit;
+  padding: .5rem;
   margin-left: auto;
 }
 
@@ -8670,6 +8686,7 @@ body {
 .skip-thesis {
   padding: 0;
   margin: 0;
+  font-family: "Open Sans", Arial, sans-serif;
   font-weight: 300;
   color: #464a4c;
   cursor: pointer;
@@ -8730,7 +8747,7 @@ body {
 .thesis-control-next .unstyled {
   padding: 0;
   margin: 0;
-  color: #b5181f;
+  color: #292b2c;
 }
 
 .thesis-control-prev {
@@ -8847,6 +8864,15 @@ body {
   opacity: 1;
 }
 
+.emphasize-toggle-wrap {
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.emphasize-toggle-wrap:hover {
+  color: #b5181f;
+}
+
 .collapse-header {
   cursor: pointer;
 }
@@ -8879,8 +8905,11 @@ body {
 }
 
 .opinion-wrap i {
-  width: 2rem;
-  height: 2rem;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  margin-bottom: 1px;
+  margin-left: 1px;
 }
 
 .opinion-wrap i:before {

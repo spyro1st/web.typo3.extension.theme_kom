@@ -1,5 +1,13 @@
-button:focus {
-  outline: 0;
+button {
+  transition: all .2s;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:hover {
+    color: $link-hover-color;
+  }
 }
 
 .btn {
@@ -19,7 +27,8 @@ button:focus {
   box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, .3);
 
   .opinion-wrap {
-    padding: .344rem .5rem;
+    display: inherit;
+    padding: .5rem;
     margin-left: auto;
   }
 }

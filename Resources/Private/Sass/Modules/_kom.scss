@@ -16,6 +16,7 @@
 .skip-thesis {
   padding: 0;
   margin: 0;
+  font-family: $font-family-base;
   font-weight: 300;
   color: $gray;
   cursor: pointer;
@@ -194,6 +195,15 @@
   }
 }
 
+.emphasize-toggle-wrap {
+  cursor: pointer;
+  transition: all .2s;
+
+  &:hover {
+    color: $link-hover-color;
+  }
+}
+
 .collapse-header {
   cursor: pointer;
 
@@ -229,8 +239,11 @@
   border-radius: 50%;
 
   i {
-    width: 2rem;
-    height: 2rem;
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin-bottom: 1px;
+    margin-left: 1px;
 
     &:before {
       font-size: $font-size-lg;

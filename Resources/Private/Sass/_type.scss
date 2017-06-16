@@ -8,3 +8,10 @@ small,
   font-weight: $font-weight-base;
   color: $white-light;
 }
+
+h2,
+.h2 {
+  @include media-breakpoint-down(xs) {
+    font-size: $font-size-base;
+  }
+}
