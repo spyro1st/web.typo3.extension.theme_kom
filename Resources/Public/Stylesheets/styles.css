@@ -8709,10 +8709,6 @@ body {
   }
 }
 
-.thesis-balloon-wrap {
-  margin-bottom: calc(25px + 1rem);
-}
-
 @media (min-width: 768px) {
   .thesis-balloon-wrap {
     margin-top: calc(25px + 6rem);
@@ -8867,6 +8863,12 @@ body {
 .emphasize-toggle-wrap {
   cursor: pointer;
   transition: all .2s;
+}
+
+@media (max-width: 991px) {
+  .emphasize-toggle-wrap {
+    margin-top: calc(25px + 1rem);
+  }
 }
 
 .emphasize-toggle-wrap:hover {

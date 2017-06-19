@@ -41,8 +41,6 @@
 }
 
 .thesis-balloon-wrap {
-  margin-bottom: calc(25px + #{$spacer-y});
-
   @include media-breakpoint-up(md) {
     margin-top: calc(25px + #{$spacer-y * 6});
     margin-bottom: calc(25px + #{$spacer-y * 6});
@@ -196,6 +194,9 @@
 }
 
 .emphasize-toggle-wrap {
+  @include media-breakpoint-down(md) {
+    margin-top: calc(25px + #{$spacer-y});
+  }
   cursor: pointer;
   transition: all .2s;
 
