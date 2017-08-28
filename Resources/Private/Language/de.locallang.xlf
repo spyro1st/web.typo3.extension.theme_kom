@@ -17,6 +17,18 @@
 				<source>Logo of Kandidat-O-Mat</source>
 				<target>Logo der Kandidat-O-Mat</target>
 			</trans-unit>
+			<trans-unit id="header.logo.bz.sitename">
+				<source>Badische-Zeitung</source>
+				<target>Badische-Zeitung</target>
+			</trans-unit>
+			<trans-unit id="header.logo.bz.titletext">
+				<source>Badische-Zeitung</source>
+				<target>Badische-Zeitung</target>
+			</trans-unit>
+			<trans-unit id="header.logo.bz.alttext">
+				<source>Logo of Badische-Zeitung</source>
+				<target>Logo der Badischen-Zeitung</target>
+			</trans-unit>
 			<trans-unit id="menu.faq">
 				<source>FAQ</source>
 				<target>FAQ</target>

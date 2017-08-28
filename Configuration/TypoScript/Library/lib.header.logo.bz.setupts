@@ -1,0 +1,17 @@
+lib.header.logo {
+	bz = IMAGE
+	bz {
+		file = EXT:theme_kom/Resources/Public/Images/Frontend/BZLogo-RBG-pos.svg
+		params = class="img-fluid w-100"
+		titleText.data = LLL:EXT:theme_kom/Resources/Private/Language/locallang.xlf:header.logo.bz.titletext
+		altText.data = LLL:EXT:theme_kom/Resources/Private/Language/locallang.xlf:header.logo.bz.alttext
+		stdWrap {
+			required = 1
+			typolink {
+				parameter = http://www.badische-zeitung.de/
+				title.data = LLL:EXT:theme_kom/Resources/Private/Language/locallang.xlf:header.logo.bz.sitename
+				forceAbsoluteUrl = 1
+			}
+		}
+	}
+}
