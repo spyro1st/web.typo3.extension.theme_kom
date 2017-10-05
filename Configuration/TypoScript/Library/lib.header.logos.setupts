@@ -25,7 +25,7 @@ lib.header.logo {
 		altText = Albert-Ludwigs-Universität Freiburg
 		stdWrap {
 			typolink {
-				parameter = https://www.uni-freiburg.de/
+				parameter = https://portal.uni-freiburg.de/politik/professuren/vergleichende-regierungslehre
 				title >
 				title = Albert-Ludwigs-Universität Freiburg
 			}
@@ -40,7 +40,7 @@ lib.header.logo {
 		altText = Technische Universität Braunschweig
 		stdWrap {
 			typolink {
-				parameter = https://www.tu-braunschweig.de/
+				parameter = https://www.tu-braunschweig.de/coppp
 				title = Technische Universität Braunschweig
 			}
 		}
@@ -54,7 +54,7 @@ lib.header.logo {
 		altText =  Heinrich Heine Universität Düsseldorf
 		stdWrap {
 			typolink {
-				parameter = https://www.uni-duesseldorf.de/
+				parameter = https://www.phil-fak.uni-duesseldorf.de/politikwissenschaft/
 				title >
 				title = Heinrich Heine Universität Düsseldorf
 			}
