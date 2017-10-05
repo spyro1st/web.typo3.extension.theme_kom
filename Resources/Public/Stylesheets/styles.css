@@ -393,7 +393,7 @@ blockquote {
 }
 
 a {
-  color: #292b2c;
+  color: #b5181f;
   text-decoration: none;
 }
 
@@ -2114,11 +2114,6 @@ pre code {
   opacity: 1;
 }
 
-.form-control::-moz-placeholder {
-  color: #c4c4c4;
-  opacity: 1;
-}
-
 .form-control:-ms-input-placeholder {
   color: #c4c4c4;
   opacity: 1;
@@ -2827,7 +2822,7 @@ fieldset[disabled] a.btn {
 
 .btn-link {
   font-weight: normal;
-  color: #292b2c;
+  color: #b5181f;
   border-radius: 0;
 }
 
@@ -4177,10 +4172,8 @@ tbody.collapse.show {
 
 @media (min-width: 576px) {
   .card-columns {
-    -moz-column-count: 3;
-         column-count: 3;
-    -moz-column-gap: 1.25rem;
-         column-gap: 1.25rem;
+    column-count: 3;
+    column-gap: 1.25rem;
   }
   .card-columns .card {
     display: inline-block;
@@ -4258,7 +4251,7 @@ tbody.collapse.show {
   padding: 0.5rem 0.75rem;
   margin-left: -1px;
   line-height: 1.25;
-  color: #292b2c;
+  color: #b5181f;
   background-color: #ffffff;
   border: 1px solid #ddd;
 }
@@ -8444,6 +8437,10 @@ small,
   }
 }
 
+a.text-gray-dark:hover {
+  color: #b5181f !important;
+}
+
 .navbar.bg-primary {
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.4);
 }
@@ -8743,7 +8740,7 @@ body {
 .thesis-control-next .unstyled {
   padding: 0;
   margin: 0;
-  color: #292b2c;
+  color: #b5181f;
 }
 
 .thesis-control-prev {
