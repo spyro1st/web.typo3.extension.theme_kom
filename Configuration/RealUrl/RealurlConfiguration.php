@@ -37,7 +37,54 @@ $TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT'] = array(
         'segTitleFieldList' => 'tx_realurl_pathsegment,alias,nav_title,title',
     ),
 
-    'fixedPostVars' => array(),
+    'fixedPostVars' => array(
+        'komConfiguration' => array(
+            array(
+                'GETvar' => 'tx_kom_pi1[controller]',
+                'noMatch' => 'bypass',
+            ),
+            array(
+                'GETvar' => 'tx_kom_pi1[action]',
+                'valueMap' => array(
+                    'umfrage' => 'questionnaire',
+                    'gewichtung' => 'emphasize',
+                    'ergebnis' => 'result',
+                    'vergleich' => 'compare',
+                ),
+                'noMatch' => 'bypass',
+            ),
+            array(
+                'GETvar' => 'tx_kom_pi1[election]',
+                'lookUpTable' => array(
+                    'table' => 'tx_kom_domain_model_election',
+                    'id_field' => 'uid',
+                    'alias_field' => 'title',
+                    'addWhereClause' => ' AND NOT deleted',
+                    'useUniqueCache' => 1,
+                    'useUniqueCache_conf' => array(
+                        'strtolower' => 1,
+                        'spaceCharacter' => '-'
+                    )
+                ),
+            ),
+            array(
+                'GETvar' => 'tx_kom_pi1[electionDistrict]',
+                'lookUpTable' => array(
+                    'table' => 'tx_kom_domain_model_electiondistrict',
+                    'id_field' => 'uid',
+                    'alias_field' => 'title',
+                    'addWhereClause' => ' AND NOT deleted',
+                    'useUniqueCache' => 1,
+                    'useUniqueCache_conf' => array(
+                        'strtolower' => 1,
+                        'spaceCharacter' => '-'
+                    )
+                ),
+            ),
+        ),
+        // uid of the detail commerce page on live
+        '2' => 'komConfiguration',
+    ),
 
     'postVarSets' => array(
         '_DEFAULT' => array(

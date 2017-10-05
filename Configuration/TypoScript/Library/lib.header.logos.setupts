@@ -1,0 +1,78 @@
+lib.header.logo {
+	main = IMAGE
+	main {
+		file = EXT:theme_kom/Resources/Public/Images/Frontend/logo-lpb.svg
+		params = class="img-fluid w-100"
+		titleText.data = LLL:EXT:theme_kom/Resources/Private/Language/locallang.xlf:header.logo.titletext
+		altText.data = LLL:EXT:theme_kom/Resources/Private/Language/locallang.xlf:header.logo.alttext
+		stdWrap {
+			required = 1
+			typolink {
+				parameter = {$themes.configuration.pages.startsite}
+				parameter.insertData = 1
+				title.data = LLL:EXT:theme_kom/Resources/Private/Language/locallang.xlf:header.logo.sitename
+				forceAbsoluteUrl = 1
+				extTarget = _blank
+			}
+		}
+	}
+	unifreiburg < .main
+	unifreiburg {
+		file = EXT:theme_kom/Resources/Public/Images/Frontend/logo-universitaet-freiburg.png
+		titleText >
+		titleText = Albert-Ludwigs-Universität Freiburg
+		altText >
+		altText = Albert-Ludwigs-Universität Freiburg
+		stdWrap {
+			typolink {
+				parameter = https://portal.uni-freiburg.de/politik/professuren/vergleichende-regierungslehre
+				title >
+				title = Albert-Ludwigs-Universität Freiburg
+			}
+		}
+	}
+	tubraunschweig < .main
+	tubraunschweig {
+		file = EXT:theme_kom/Resources/Public/Images/Frontend/logo-tubs.png
+		titleText >
+		titleText = Technische Universität Braunschweig
+		altText >
+		altText = Technische Universität Braunschweig
+		stdWrap {
+			typolink {
+				parameter = https://www.tu-braunschweig.de/coppp
+				title = Technische Universität Braunschweig
+			}
+		}
+	}
+	hhuduesseldorf < .main
+	hhuduesseldorf {
+		file = EXT:theme_kom/Resources/Public/Images/Frontend/logo-heinrich-heine-universitaet.jpg
+		titleText >
+		titleText =  Heinrich Heine Universität Düsseldorf
+		altText >
+		altText =  Heinrich Heine Universität Düsseldorf
+		stdWrap {
+			typolink {
+				parameter = https://www.phil-fak.uni-duesseldorf.de/politikwissenschaft/
+				title >
+				title = Heinrich Heine Universität Düsseldorf
+			}
+		}
+	}
+	debat-o-meter < .main
+	debat-o-meter {
+		file = EXT:theme_kom/Resources/Public/Images/Frontend/logo-debat-o-meter.png
+		titleText >
+		titleText = Debat-O-Meter
+		altText >
+		altText = Debat-O-Meter
+		stdWrap {
+			typolink {
+				parameter = https://www.debatometer.com/
+				title >
+				title = Debat-O-Meter
+			}
+		}
+	}
+}
