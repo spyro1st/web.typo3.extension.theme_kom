@@ -19,3 +19,34 @@ h2,
 a.text-gray-dark:hover {
   color: $brand-primary !important;
 }
+
+.headline-left > header {
+  > h1,
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6 {
+    text-align: left;
+  }
+}
+.headline-center > header {
+  > h1,
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6 {
+    text-align: center;
+  }
+}
+.headline-right > header {
+  > h1,
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6 {
+    text-align: right;
+  }
+}

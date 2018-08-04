@@ -8441,6 +8441,33 @@ a.text-gray-dark:hover {
   color: #b5181f !important;
 }
 
+.headline-left > header > h1,
+.headline-left > header > h2,
+.headline-left > header > h3,
+.headline-left > header > h4,
+.headline-left > header > h5,
+.headline-left > header > h6 {
+  text-align: left;
+}
+
+.headline-center > header > h1,
+.headline-center > header > h2,
+.headline-center > header > h3,
+.headline-center > header > h4,
+.headline-center > header > h5,
+.headline-center > header > h6 {
+  text-align: center;
+}
+
+.headline-right > header > h1,
+.headline-right > header > h2,
+.headline-right > header > h3,
+.headline-right > header > h4,
+.headline-right > header > h5,
+.headline-right > header > h6 {
+  text-align: right;
+}
+
 .navbar.bg-primary {
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.4);
 }
