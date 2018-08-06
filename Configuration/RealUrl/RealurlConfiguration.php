@@ -46,11 +46,6 @@ $TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT'] = array(
             array(
                 'GETvar' => 'tx_kom_pi1[action]',
                 'valueMap' => array(
-                    'umfrage' => 'questionnaire',
-                    'gewichtung' => 'emphasize',
-                    'ergebnis' => 'result',
-                    'vergleich' => 'compare',
-                    'navigation' => 'navigation',
                 ),
                 'noMatch' => 'bypass',
             ),
@@ -84,7 +79,12 @@ $TYPO3_CONF_VARS['EXTCONF']['realurl']['_DEFAULT'] = array(
             ),
         ),
         // uid of the detail commerce page on live
-        '2' => 'komConfiguration',
+        '3' => 'komConfiguration',
+        '4' => 'komConfiguration',
+        '5' => 'komConfiguration',
+        '6' => 'komConfiguration',
+        '7' => 'komConfiguration',
+        '8' => 'komConfiguration',
     ),
 
     'postVarSets' => array(

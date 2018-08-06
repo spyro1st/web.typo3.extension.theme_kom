@@ -11,9 +11,9 @@ mod.web_layout.BackendLayouts {
 					1 {
 						columns {
 							1 {
-								name = LLL:EXT:theme_kom/Resources/Private/Language/BackendLayouts.xlf:area_content
+								name = LLL:EXT:theme_kom/Resources/Private/Language/BackendLayouts.xlf:area_logo
 								rowspan = 1
-								colPos = 0
+								colPos = 4
 							}
 						}
 					}
@@ -21,9 +21,9 @@ mod.web_layout.BackendLayouts {
 					2 {
 						columns {
 							1 {
-								name = LLL:EXT:theme_kom/Resources/Private/Language/BackendLayouts.xlf:area_unused
+								name = LLL:EXT:theme_kom/Resources/Private/Language/BackendLayouts.xlf:area_content
 								rowspan = 1
-								colPos = -2
+								colPos = 0
 							}
 						}
 					}
@@ -31,9 +31,9 @@ mod.web_layout.BackendLayouts {
 					3 {
 						columns {
 							1 {
-								name = LLL:EXT:theme_kom/Resources/Private/Language/BackendLayouts.xlf:area_logo
+								name = LLL:EXT:theme_kom/Resources/Private/Language/BackendLayouts.xlf:area_unused
 								rowspan = 1
-								colPos = 4
+								colPos = -2
 							}
 						}
 					}

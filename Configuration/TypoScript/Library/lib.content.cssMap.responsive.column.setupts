@@ -1,12 +1,14 @@
+#ToDo: Check / integrate equal height
+
 lib.content.cssMap.responsive.column {
-	
+
 	equalHeight {
 		medium-equalHeight = col-md-height
 		small-equalHeight = col-sm-height
 		extrasmall-equalHeight = col-xs-height
 		large-equalHeight = col-lg-height
 	}
-	
+
 	#Medium Size Width
 	medium-width-1 = col-md-1
 	medium-width-2 = col-md-2
@@ -241,4 +243,62 @@ lib.content.cssMap.responsive.column {
 	large-push-10 = col-lg-push-10
 	large-push-11 = col-lg-push-11
 	large-push-12 = col-lg-push-12
+
+	#extralarge Size Width
+	extralarge-width-1 = col-xl-1
+	extralarge-width-2 = col-xl-2
+	extralarge-width-3 = col-xl-3
+	extralarge-width-4 = col-xl-4
+	extralarge-width-5 = col-xl-5
+	extralarge-width-6 = col-xl-6
+	extralarge-width-7 = col-xl-7
+	extralarge-width-8 = col-xl-8
+	extralarge-width-9 = col-xl-9
+	extralarge-width-10 = col-xl-10
+	extralarge-width-11 = col-xl-11
+	extralarge-width-12 = col-xl-12
+
+	#extralarge Size Offset
+	extralarge-offset-0 = col-xl-offset-0
+	extralarge-offset-1 = col-xl-offset-1
+	extralarge-offset-2 = col-xl-offset-2
+	extralarge-offset-3 = col-xl-offset-3
+	extralarge-offset-4 = col-xl-offset-4
+	extralarge-offset-5 = col-xl-offset-5
+	extralarge-offset-6 = col-xl-offset-6
+	extralarge-offset-7 = col-xl-offset-7
+	extralarge-offset-8 = col-xl-offset-8
+	extralarge-offset-9 = col-xl-offset-9
+	extralarge-offset-10 = col-xl-offset-10
+	extralarge-offset-11 = col-xl-offset-11
+	extralarge-offset-12 = col-xl-offset-12
+
+	#extralarge Size Move Left
+	extralarge-pull-0 = col-xl-pull-0
+	extralarge-pull-1 = col-xl-pull-1
+	extralarge-pull-2 = col-xl-pull-2
+	extralarge-pull-3 = col-xl-pull-3
+	extralarge-pull-4 = col-xl-pull-4
+	extralarge-pull-5 = col-xl-pull-5
+	extralarge-pull-6 = col-xl-pull-6
+	extralarge-pull-7 = col-xl-pull-7
+	extralarge-pull-8 = col-xl-pull-8
+	extralarge-pull-9 = col-xl-pull-9
+	extralarge-pull-10 = col-xl-pull-10
+	extralarge-pull-11 = col-xl-pull-11
+	extralarge-pull-12 = col-xl-pull-12
+
+	#extralarge Size Move Right
+	extralarge-push-0 = col-xl-push-0
+	extralarge-push-2 = col-xl-push-2
+	extralarge-push-3 = col-xl-push-3
+	extralarge-push-4 = col-xl-push-4
+	extralarge-push-5 = col-xl-push-5
+	extralarge-push-6 = col-xl-push-6
+	extralarge-push-7 = col-xl-push-7
+	extralarge-push-8 = col-xl-push-8
+	extralarge-push-9 = col-xl-push-9
+	extralarge-push-10 = col-xl-push-10
+	extralarge-push-11 = col-xl-push-11
+	extralarge-push-12 = col-xl-push-12
 }

@@ -6,10 +6,10 @@
 
 			<!-- SITE -->
 			<trans-unit id="header.logo.sitename">
-				<source>Kandidat-O-Mat / Niedersachs-O-Mat</source>
+				<source>Kandidat-O-Mat</source>
 			</trans-unit>
 			<trans-unit id="header.logo.titletext">
-				<source>Kandidat-O-Mat / Niedersachs-O-Mat</source>
+				<source>Kandidat-O-Mat</source>
 			</trans-unit>
 			<trans-unit id="header.logo.alttext">
 				<source>Logo of Kandidat-O-Mat</source>
