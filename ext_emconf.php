@@ -23,7 +23,10 @@ $EM_CONF[$_EXTKEY] = array(
     'version' => '1.3.0-DEV',
     'constraints' => array(
         'depends' => array(
-            'typo3' => '7.6.0-7.6.99'
+            'typo3' => '7.6.0-7.6.99',
+            'themes' => '7.0.3-7.0.99',
+            'themes_gridelements' => '7.0.1-7.0.99',
+            'gridelements' => '7.4.0-7.4.99'
         ),
         'conflicts' => array(),
         'suggests' => array(),
