@@ -4,4 +4,13 @@ lib.content.cssMap.variants {
 	headline-left = headline-left
 	headline-center = headline-center
 	headline-right = headline-right
+
+	// Text alignment
+	text-left = text-left
+	text-center = text-center
+	text-right = text-right
+
+	// Text transform
+	transform-uppercase = text-uppercase
+	transform-lowercase = text-lowercase
 }

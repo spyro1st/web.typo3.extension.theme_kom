@@ -9,6 +9,17 @@ themes {
 					center = LLL:EXT:theme_kom/Resources/Private/Language/locallang_variants.xlf:content.variants.headline_center
 					right = LLL:EXT:theme_kom/Resources/Private/Language/locallang_variants.xlf:content.variants.headline_right
 				}
+				text {
+					none = LLL:EXT:theme_kom/Resources/Private/Language/locallang_variants.xlf:content.variants.text_label
+					left = LLL:EXT:theme_kom/Resources/Private/Language/locallang_variants.xlf:content.variants.text_left
+					center = LLL:EXT:theme_kom/Resources/Private/Language/locallang_variants.xlf:content.variants.text_center
+					right = LLL:EXT:theme_kom/Resources/Private/Language/locallang_variants.xlf:content.variants.text_right
+				}
+				transform {
+					none = LLL:EXT:theme_kom/Resources/Private/Language/locallang_variants.xlf:content.variants.transform_label
+					uppercase = LLL:EXT:theme_kom/Resources/Private/Language/locallang_variants.xlf:content.variants.transform_uppercase
+					lowercase = LLL:EXT:theme_kom/Resources/Private/Language/locallang_variants.xlf:content.variants.transform_lowercase
+				}
 			}
 		}
 	}

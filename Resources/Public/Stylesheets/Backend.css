@@ -156,3 +156,7 @@ a.default-link {
 	color: green;
 	text-decoration: none;
 }
+
+small, .small {
+	font-weight: 300;
+}

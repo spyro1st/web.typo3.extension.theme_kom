@@ -50,3 +50,15 @@ a.text-gray-dark:hover {
     text-align: right;
   }
 }
+
+.align-left {
+  @extend .text-left;
+}
+
+.align-center {
+  @extend .text-center;
+}
+
+.align-right {
+  @extend .text-right;
+}
