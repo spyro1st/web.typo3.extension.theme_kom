@@ -29,7 +29,12 @@ button {
   .opinion-wrap {
     display: inherit;
     padding: .5rem;
-    margin-right: $spacer-x;
+  }
+
+  @include media-breakpoint-up(lg) {
+    .opinion-wrap {
+      margin-right: $spacer-x;
+    }
   }
 }
 
