@@ -72,6 +72,8 @@ gulp.task('scripts', function () {
 		'./Resources/Private/Vendor/tether/dist/js/tether.js',
 		'./Resources/Private/Vendor/bootstrap/dist/js/bootstrap.js',
 		'./Resources/Private/Vendor/viewport-units-buggyfill/viewport-units-buggyfill.js',
+		'./Resources/Private/Vendor/hammer.js/hammer.js',
+		'./Resources/Private/Vendor/jquery-hammerjs/jquery.hammer.js',
 		'./Resources/Public/JavaScripts/KandidatOMat.js'
 	])
 		.pipe(plumber(plumberErrorHandler))

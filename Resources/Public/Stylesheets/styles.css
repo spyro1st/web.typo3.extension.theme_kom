@@ -8569,7 +8569,7 @@ button:hover {
 .btn-secondary .opinion-wrap {
   display: inherit;
   padding: .5rem;
-  margin-left: auto;
+  margin-right: 1rem;
 }
 
 .btn-inverted {
@@ -8718,6 +8718,19 @@ body {
   border: 0;
 }
 
+.mobile-help {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1029;
+  width: 100%;
+  height: calc(100vh - 48px);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-top: -1rem;
+  background: #ffffff;
+}
+
 .carousel-item .thesis-balloon {
   margin-bottom: calc(25px + 3rem);
 }
@@ -8738,6 +8751,10 @@ body {
     margin-top: calc(25px + 6rem);
     margin-bottom: calc(25px + 6rem);
   }
+}
+
+.thesis-balloon-wrap-inner {
+  position: relative;
 }
 
 .thesis-control-prev,
@@ -8795,67 +8812,126 @@ body {
   right: -2rem;
 }
 
-.thesis-balloon {
+.thesis-counter {
+  color: #c4c4c4;
+}
+
+.thesis-counter strong {
+  font-weight: bold;
+  color: #b5181f;
+}
+
+.thesis-balloon,
+.thesis-balloon-inactive {
   position: relative;
+  z-index: 999;
   padding: 1rem 1rem;
   margin: 0.5rem 0;
-  border: 8px solid #c4c4c4;
+  background: #ffffff;
+  border: 1px solid #c4c4c4;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.3);
+  transition: background-color .3s ease-in-out;
+  will-change: transform;
 }
 
-.thesis-balloon .content {
-  height: 25vh;
-  overflow-y: scroll;
-}
-
-@media (min-width: 768px) {
-  .thesis-balloon .content {
-    height: 10vh;
+@media (min-width: 992px) {
+  .thesis-balloon,
+  .thesis-balloon-inactive {
+    padding: 4rem 4rem;
   }
 }
 
-.thesis-balloon:before {
-  content: "";
+.thesis-balloon[class*="swipe-"] .content,
+.thesis-balloon-inactive[class*="swipe-"] .content {
+  opacity: .2;
+}
+
+.thesis-balloon[class*="swipe-"]:after,
+.thesis-balloon-inactive[class*="swipe-"]:after {
   position: absolute;
-  bottom: -50px;
-  left: 30px;
-  width: 0;
-  height: 0;
-  border: 1.5rem solid;
-  border-color: #c4c4c4 transparent transparent #c4c4c4;
+  top: 50%;
+  left: 50%;
+  padding: 0.5rem 2rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border: 5px solid #ffffff;
+  -ms-transform: translateY(-50%) translateX(-50%);
+      transform: translateY(-50%) translateX(-50%);
 }
 
-.thesis-balloon:after {
-  content: "";
+.thesis-balloon.swipe-agree,
+.thesis-balloon-inactive.swipe-agree {
+  background: #04b200;
+}
+
+.thesis-balloon.swipe-agree:after,
+.thesis-balloon-inactive.swipe-agree:after {
+  content: attr(data-agree);
+}
+
+.thesis-balloon.swipe-disagree,
+.thesis-balloon-inactive.swipe-disagree {
+  background: #b5181f;
+}
+
+.thesis-balloon.swipe-disagree:after,
+.thesis-balloon-inactive.swipe-disagree:after {
+  content: attr(data-disagree);
+}
+
+.thesis-balloon.swipe-draw,
+.thesis-balloon-inactive.swipe-draw {
+  background: #464a4c;
+}
+
+.thesis-balloon.swipe-draw:after,
+.thesis-balloon-inactive.swipe-draw:after {
+  content: attr(data-draw);
+}
+
+.thesis-balloon.swipe-skip,
+.thesis-balloon-inactive.swipe-skip {
+  background: #eab30b;
+}
+
+.thesis-balloon.swipe-skip:after,
+.thesis-balloon-inactive.swipe-skip:after {
+  content: attr(data-skip);
+}
+
+.thesis-balloon-inactive {
   position: absolute;
-  bottom: -30px;
-  left: 38px;
-  width: 0;
-  height: 0;
-  border: 1rem solid;
-  border-color: #f3f3f4 transparent transparent #f3f3f4;
+  top: 0;
+  z-index: 4;
+  margin: .5rem -.5rem -.5rem .5rem;
+  background-color: #eceeef;
+  -ms-transform: rotate(1deg);
+      transform: rotate(1deg);
 }
 
-@media (min-width: 768px) {
-  .thesis-balloon:before {
-    content: "";
-    position: absolute;
-    top: -50px;
-    left: 30px;
-    width: 0;
-    height: 0;
-    border: 1.5rem solid;
-    border-color: transparent transparent #c4c4c4 #c4c4c4;
+@media (min-width: 992px) {
+  .thesis-balloon-inactive {
+    -ms-transform: rotate(1deg);
+        transform: rotate(1deg);
   }
-  .thesis-balloon:after {
-    content: "";
-    position: absolute;
-    top: -30px;
-    left: 38px;
-    width: 0;
-    height: 0;
-    border: 1rem solid;
-    border-color: transparent transparent #f3f3f4 #f3f3f4;
-  }
+}
+
+.thesis-balloon-inactive:nth-child(3) {
+  z-index: 3;
+  margin: -.25rem .5rem .25rem -.5rem;
+  -ms-transform: rotate(-1.5deg);
+      transform: rotate(-1.5deg);
+}
+
+.thesis-balloon-inactive:nth-child(4) {
+  z-index: 2;
+  margin: -.5rem 1rem .5rem -1rem;
+  -ms-transform: rotate(-3.5deg);
+      transform: rotate(-3.5deg);
 }
 
 .thesis-list small {

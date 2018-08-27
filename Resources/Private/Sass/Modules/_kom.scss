@@ -24,6 +24,19 @@
   border: 0;
 }
 
+.mobile-help {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1029;
+  width: 100%;
+  height: calc(100vh - 48px);
+  padding-top: $spacer-y;
+  padding-bottom: $spacer-y;
+  margin-top: -1rem;
+  background: $white;
+}
+
 .carousel-item .thesis-balloon {
   margin-bottom: calc(25px + #{$spacer-y * 3});
 }
@@ -41,10 +54,15 @@
 }
 
 .thesis-balloon-wrap {
+
   @include media-breakpoint-up(md) {
     margin-top: calc(25px + #{$spacer-y * 6});
     margin-bottom: calc(25px + #{$spacer-y * 6});
   }
+}
+
+.thesis-balloon-wrap-inner {
+  position: relative;
 }
 
 .thesis-control-prev,
@@ -96,67 +114,108 @@
   }
 }
 
-.thesis-balloon {
+.thesis-counter {
+  color: $gray-light;
+
+  strong {
+    font-weight: bold;
+    color: $red;
+  }
+}
+
+.thesis-balloon,
+.thesis-balloon-inactive {
   position: relative;
-  padding: $spacer-y $spacer-x;
+  z-index: 999;
+  padding: ($spacer-y) ($spacer-x);
   margin: $spacer-y / 2 0;
-  border: 8px solid $gray-light;
-  
-  .content {
-    height: 25vh;
-    overflow-y: scroll;
+  background: $white;
+  border: 1px solid $gray-light;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, .3);
+  transition: background-color .3s ease-in-out;
+  will-change: transform;
 
-    @include media-breakpoint-up(md) {
-      height: 10vh;
-    }
+  @include media-breakpoint-up(lg) {
+    padding: ($spacer-y * 4) ($spacer-x * 4);
   }
 
-  &:before {
-    content: "";
-    position: absolute;
-    bottom: -50px;
-    left: 30px;
-    width: 0;
-    height: 0;
-    border: 1.5rem solid;
-    border-color: $gray-light transparent transparent $gray-light;
-  }
-
-  &:after {
-    content: "";
-    position: absolute;
-    bottom: -30px;
-    left: 38px;
-    width: 0;
-    height: 0;
-    border: 1rem solid;
-    border-color: $body-bg transparent transparent $body-bg;
-  }
-
-  @include media-breakpoint-up(md) {
-    &:before {
-      content: "";
-      position: absolute;
-      top: -50px;
-      left: 30px;
-      width: 0;
-      height: 0;
-      border: 1.5rem solid;
-      border-color: transparent transparent $gray-light $gray-light;
+  &[class*="swipe-"] {
+    .content {
+      opacity: .2;
     }
 
     &:after {
-      content: "";
       position: absolute;
-      top: -30px;
-      left: 38px;
-      width: 0;
-      height: 0;
-      border: 1rem solid;
-      border-color: transparent transparent $body-bg $body-bg;
+      top: 50%;
+      left: 50%;
+      padding: ($spacer-y / 2) ($spacer-x * 2);
+      font-size: $font-size-h5;
+      font-weight: bold;
+      color: $white;
+      text-transform: uppercase;
+      white-space: nowrap;
+      border: 5px solid $white;
+      transform: translateY(-50%) translateX(-50%);
+    }
+  }
+
+  &.swipe-agree {
+    background: $green;
+
+    &:after {
+      content: attr(data-agree);
+    }
+  }
+
+  &.swipe-disagree {
+    background: $red;
+
+    &:after {
+      content: attr(data-disagree);
+    }
+  }
+
+  &.swipe-draw {
+    background: $gray;
+
+    &:after {
+      content: attr(data-draw);
+    }
+  }
+
+  &.swipe-skip {
+    background: $yellow;
+
+    &:after {
+      content: attr(data-skip);
     }
   }
 }
+
+.thesis-balloon-inactive {
+  position: absolute;
+  top: 0;
+  z-index: 4;
+  margin: .5rem -.5rem -.5rem .5rem;
+  background-color: $gray-lighter;
+  transform: rotate(1deg);
+
+  @include media-breakpoint-up(lg) {
+    transform: rotate(1deg);
+  }
+}
+
+.thesis-balloon-inactive:nth-child(3) {
+  z-index: 3;
+  margin: -.25rem .5rem .25rem -.5rem;
+  transform: rotate(-1.5deg);
+}
+
+.thesis-balloon-inactive:nth-child(4) {
+  z-index: 2;
+  margin: -.5rem 1rem .5rem -1rem;
+  transform: rotate(-3.5deg);}
 
 .thesis-list {
   small {
@@ -197,6 +256,7 @@
   @include media-breakpoint-down(md) {
     margin-top: calc(25px + #{$spacer-y});
   }
+
   cursor: pointer;
   transition: all .2s;
 
