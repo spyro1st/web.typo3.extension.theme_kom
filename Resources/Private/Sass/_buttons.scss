@@ -24,7 +24,8 @@ button {
 }
 
 .btn-secondary {
-  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, .3);
+
+  border: 1px solid $gray-light;
 
   .opinion-wrap {
     display: inherit;
@@ -36,12 +37,77 @@ button {
       margin-right: $spacer-x;
     }
   }
+
+  @include media-breakpoint-only(xs) {
+    background-color: transparent;
+    border: 0;
+
+    .opinion-wrap {
+      padding: 1.5rem;
+    }
+    
+    &.active, &:active, &:focus {
+      box-shadow: none;
+      margin-top: -5px;
+      background-color: transparent;
+
+      .opinion-wrap {
+        border: 5px solid $gray-light;
+      }
+    }
+  }
 }
 
 .btn-inverted {
   @include button-variant($btn-primary-bg, $btn-primary-color, $btn-primary-border);
   @include button-size($btn-padding-x, $btn-padding-x, $font-size-lg, $btn-border-radius-lg);
   box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, .3);
+}
+
+.btn-agree {
+  .opinion-wrap {
+    background-color: $green;
+    border: 0;
+    
+    i {
+      color: $white !important;
+    }
+  }
+}
+
+.btn-disagree {
+  .opinion-wrap {
+    background-color: $red;
+    border: 0;
+
+    i {
+      margin-right: 1px;
+      margin-left: 0;
+      color: $white !important;
+    }
+  }
+}
+
+.btn-draw {
+  .opinion-wrap {
+    background-color: $yellow;
+    border: 0;
+
+    i {
+      color: $white !important;
+    }
+  }
+}
+
+.btn-skip {
+  .opinion-wrap {
+    background-color: $gray;
+    border: 0;
+
+    i {
+      color: $white !important;
+    }
+  }
 }
 
 @include media-breakpoint-down(xs) {

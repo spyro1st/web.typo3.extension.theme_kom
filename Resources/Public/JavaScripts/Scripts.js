@@ -8584,9 +8584,6 @@ $(document).ready(function () {
 	});
 
 	$('.thesis-balloon').on('panend', function (event) {
-		console.log(event.gesture.velocityX);
-		console.log(event.gesture.velocityY);
-
 
 		var moveOutWidth = document.body.clientWidth;
 		var keep = true;
@@ -8661,9 +8658,9 @@ $(document).ready(function () {
 			});
 	});
 
-	setTimeout(function () {
-		$('.mobile-help').fadeOut();
-	}, 5000);
+	// setTimeout(function () {
+	// 	$('.mobile-help').fadeOut();
+	// }, 5000);
 
 	$('.mobile-help').on('click', function () {
 		$(this).fadeOut()

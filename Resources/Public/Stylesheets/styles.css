@@ -8567,7 +8567,7 @@ button:hover {
 }
 
 .btn-secondary {
-  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
+  border: 1px solid #c4c4c4;
 }
 
 .btn-secondary .opinion-wrap {
@@ -8578,6 +8578,24 @@ button:hover {
 @media (min-width: 992px) {
   .btn-secondary .opinion-wrap {
     margin-right: 1rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .btn-secondary {
+    background-color: transparent;
+    border: 0;
+  }
+  .btn-secondary .opinion-wrap {
+    padding: 1.5rem;
+  }
+  .btn-secondary.active, .btn-secondary:active, .btn-secondary:focus {
+    box-shadow: none;
+    margin-top: -5px;
+    background-color: transparent;
+  }
+  .btn-secondary.active .opinion-wrap, .btn-secondary:active .opinion-wrap, .btn-secondary:focus .opinion-wrap {
+    border: 5px solid #c4c4c4;
   }
 }
 
@@ -8611,6 +8629,44 @@ button:hover {
   background-color: #e6e6e6;
   background-image: none;
   border-color: #7f1116;
+}
+
+.btn-agree .opinion-wrap {
+  background-color: #04b200;
+  border: 0;
+}
+
+.btn-agree .opinion-wrap i {
+  color: #ffffff !important;
+}
+
+.btn-disagree .opinion-wrap {
+  background-color: #b5181f;
+  border: 0;
+}
+
+.btn-disagree .opinion-wrap i {
+  margin-right: 1px;
+  margin-left: 0;
+  color: #ffffff !important;
+}
+
+.btn-draw .opinion-wrap {
+  background-color: #eab30b;
+  border: 0;
+}
+
+.btn-draw .opinion-wrap i {
+  color: #ffffff !important;
+}
+
+.btn-skip .opinion-wrap {
+  background-color: #464a4c;
+  border: 0;
+}
+
+.btn-skip .opinion-wrap i {
+  color: #ffffff !important;
 }
 
 @media (max-width: 575px) {
@@ -8737,7 +8793,7 @@ body {
   padding-top: 1rem;
   padding-bottom: 1rem;
   margin-top: -1rem;
-  background: #ffffff;
+  background: #f3f3f4;
 }
 
 .carousel-item .thesis-balloon {
