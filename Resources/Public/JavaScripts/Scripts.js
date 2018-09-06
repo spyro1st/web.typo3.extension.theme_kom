@@ -8588,15 +8588,15 @@ $(document).ready(function () {
 		var moveOutWidth = document.body.clientWidth;
 		var keep = true;
 		if (Math.abs(event.gesture.deltaX) > 80) {
-			// if (Math.abs(event.gesture.velocityX) > 0.5) {
+			if (Math.abs(event.gesture.velocityX) > 0.4) {
 				keep = false;
-			// }
+			}
 		}
 
 		if (Math.abs(event.gesture.deltaY) > 80) {
-			// if (Math.abs(event.gesture.velocityY) > 0.5) {
+			if (Math.abs(event.gesture.velocityY) > 0.4) {
 				keep = false;
-			// }
+			}
 		}
 
 		if (keep) {
@@ -8658,9 +8658,9 @@ $(document).ready(function () {
 			});
 	});
 
-	// setTimeout(function () {
-	// 	$('.mobile-help').fadeOut();
-	// }, 5000);
+	setTimeout(function () {
+		$('.mobile-help').fadeOut();
+	}, 5000);
 
 	$('.mobile-help').on('click', function () {
 		$(this).fadeOut()
