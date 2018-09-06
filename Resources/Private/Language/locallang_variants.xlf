@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.0">
+	<file source-language="en"
+		  datatype="plaintext"
+		  original="messages"
+		  date="2014-04-13T18:20:51Z"
+		  product-name="theme_kom">
+		<header/>
+		<body>
+
+			<!-- Headline alignments -->
+			<trans-unit id="content.variants.headline_label" xml:space="preserve">
+				<source>Blockstyle for headline</source>
+			</trans-unit>
+			<trans-unit id="content.variants.headline_left" xml:space="preserve">
+				<source>Headline align left</source>
+			</trans-unit>
+			<trans-unit id="content.variants.headline_center" xml:space="preserve">
+				<source>Headline align center</source>
+			</trans-unit>
+			<trans-unit id="content.variants.headline_right" xml:space="preserve">
+				<source>Headline align right</source>
+			</trans-unit>
+
+			<!-- Text alignments -->
+			<trans-unit id="content.variants.text_label" xml:space="preserve">
+				<source>Blockstyle for text</source>
+			</trans-unit>
+			<trans-unit id="content.variants.text_left" xml:space="preserve">
+				<source>Text align left</source>
+			</trans-unit>
+			<trans-unit id="content.variants.text_center" xml:space="preserve">
+				<source>Text align center</source>
+			</trans-unit>
+			<trans-unit id="content.variants.text_right" xml:space="preserve">
+				<source>Text align right</source>
+			</trans-unit>
+
+			<!-- Text transform -->
+			<trans-unit id="content.variants.transform_label" xml:space="preserve">
+				<source>Transform text</source>
+			</trans-unit>
+			<trans-unit id="content.variants.transform_uppercase" xml:space="preserve">
+				<source>Transform uppercase</source>
+			</trans-unit>
+			<trans-unit id="content.variants.transform_lowercase" xml:space="preserve">
+				<source>Transform lowercase</source>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>

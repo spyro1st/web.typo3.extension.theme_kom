@@ -6,9 +6,19 @@ mod.web_layout.BackendLayouts {
 		config {
 			backend_layout {
 				colCount = 1
-				rowCount = 4
+				rowCount = 3
 				rows {
 					1 {
+						columns {
+							1 {
+								name = LLL:EXT:theme_kom/Resources/Private/Language/BackendLayouts.xlf:area_logo
+								rowspan = 1
+								colPos = 4
+							}
+						}
+					}
+
+					2 {
 						columns {
 							1 {
 								name = LLL:EXT:theme_kom/Resources/Private/Language/BackendLayouts.xlf:area_content
@@ -18,7 +28,7 @@ mod.web_layout.BackendLayouts {
 						}
 					}
 
-					2 {
+					3 {
 						columns {
 							1 {
 								name = LLL:EXT:theme_kom/Resources/Private/Language/BackendLayouts.xlf:area_unused

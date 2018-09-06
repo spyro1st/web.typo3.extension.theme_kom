@@ -1,0 +1,13 @@
+# Name and description of the theme (required)
+title            : Kandidat-O-Mat Theme
+version          : 1.0.3
+description      : |
+  Kandidat-O-Mat Theme
+
+parentTheme:
+  name: themes_gridelements
+  version: 0.1.1-1.99.99
+
+# Constants categories which are used for constants in this theme
+constants:
+  availableCategories: [theme,colors,font,meta,pages,container,slider,lightbox]

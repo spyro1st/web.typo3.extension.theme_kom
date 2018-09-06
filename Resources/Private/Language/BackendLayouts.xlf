@@ -34,6 +34,9 @@
 			<trans-unit id="area_unused">
 				<source>Unused Elements</source>
 			</trans-unit>
+			<trans-unit id="area_logo">
+				<source>Logos</source>
+			</trans-unit>
 
 		</body>
 	</file>
