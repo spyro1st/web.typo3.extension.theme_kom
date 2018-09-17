@@ -8623,7 +8623,7 @@ $(document).ready(function () {
 	});
 
 	$('#btn-agree').on('click', function () {
-		$('.thesis-balloon').addClass('swipe-agree').delay(800)
+		$('.thesis-balloon').addClass('swipe-agree').delay(100)
 			.queue(function (next) {
 				$(this).css('transition', 'transform .3s ease-in-out');
 				$(this).css('transform', 'translate(' + moveOutWidth + 'px, -100px) rotate(-30deg)');
@@ -8632,7 +8632,7 @@ $(document).ready(function () {
 	});
 
 	$('#btn-disagree').on('click', function () {
-		$('.thesis-balloon').addClass('swipe-disagree').delay(800)
+		$('.thesis-balloon').addClass('swipe-disagree').delay(100)
 			.queue(function (next) {
 				$(this).css('transition', 'transform .3s ease-in-out');
 				$(this).css('transform', 'translate(-' + moveOutWidth + 'px, -100px) rotate(30deg)');
@@ -8641,7 +8641,7 @@ $(document).ready(function () {
 	});
 
 	$('#btn-draw').on('click', function () {
-		$('.thesis-balloon').addClass('swipe-draw').delay(800)
+		$('.thesis-balloon').addClass('swipe-draw').delay(100)
 			.queue(function (next) {
 				$(this).css('transition', 'transform .3s ease-in-out');
 				$(this).css('transform', 'translate(-100px, ' + moveOutHeight + 'px) rotate(-10deg)');
@@ -8650,7 +8650,7 @@ $(document).ready(function () {
 	});
 
 	$('#btn-skip').on('click', function () {
-		$('.thesis-balloon').addClass('swipe-skip').delay(800)
+		$('.thesis-balloon').addClass('swipe-skip').delay(100)
 			.queue(function (next) {
 				$(this).css('transition', 'transform .3s ease-in-out');
 				$(this).css('transform', 'translate(-100px, -' + moveOutHeight + 'px) rotate(-10deg)');

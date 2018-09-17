@@ -139,6 +139,17 @@
   @include media-breakpoint-up(lg) {
     padding: ($spacer-y * 4) ($spacer-x * 4);
   }
+  
+  .content {
+    height: 40vh;
+    overflow: hidden;
+  }
+
+  @include media-breakpoint-up(lg) {
+    .content {
+      height: 25vh;
+    }
+  }
 
   &[class*="swipe-"] {
     .content {
@@ -535,4 +546,10 @@
   right: auto;
   left: 50%;
   transform: translate(-50%, 0);
+}
+
+.layout-start {
+  .btn-secondary {
+    background-color: $btn-secondary-bg;
+  }
 }
