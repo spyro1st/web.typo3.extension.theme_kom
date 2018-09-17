@@ -8575,7 +8575,7 @@ button:hover {
   padding: .5rem;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .btn-secondary .opinion-wrap {
     margin-right: 1rem;
   }
@@ -8587,7 +8587,7 @@ button:hover {
     border: 0;
   }
   .btn-secondary .opinion-wrap {
-    padding: 1.5rem;
+    padding: 1.25rem;
   }
   .btn-secondary.active, .btn-secondary:active, .btn-secondary:focus {
     box-shadow: none;
@@ -8904,6 +8904,19 @@ body {
   .thesis-balloon,
   .thesis-balloon-inactive {
     padding: 4rem 4rem;
+  }
+}
+
+.thesis-balloon .content,
+.thesis-balloon-inactive .content {
+  height: 40vh;
+  overflow: hidden;
+}
+
+@media (min-width: 992px) {
+  .thesis-balloon .content,
+  .thesis-balloon-inactive .content {
+    height: 25vh;
   }
 }
 
@@ -9293,4 +9306,8 @@ body {
   left: 50%;
   -ms-transform: translate(-50%, 0);
       transform: translate(-50%, 0);
+}
+
+.layout-start .btn-secondary {
+  background-color: #ffffff;
 }

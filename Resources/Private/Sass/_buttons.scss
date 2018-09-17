@@ -32,7 +32,7 @@ button {
     padding: .5rem;
   }
 
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(xl) {
     .opinion-wrap {
       margin-right: $spacer-x;
     }
@@ -43,7 +43,7 @@ button {
     border: 0;
 
     .opinion-wrap {
-      padding: 1.5rem;
+      padding: 1.25rem;
     }
     
     &.active, &:active, &:focus {
