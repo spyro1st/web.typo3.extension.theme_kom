@@ -1,3 +1,7 @@
+.tx-kom {
+  flex: 0 0 auto;
+}
+
 .flaticon-arrow-reverse:before {
   transform: rotate(180deg);
 }
@@ -57,7 +61,7 @@
 
   @include media-breakpoint-up(md) {
     margin-top: calc(25px + #{$spacer-y * 6});
-    margin-bottom: calc(25px + #{$spacer-y * 6});
+    margin-bottom: calc(25px + #{$spacer-y * 3});
   }
 }
 
@@ -147,7 +151,7 @@
 
   @include media-breakpoint-up(lg) {
     .content {
-      height: 25vh;
+      height: 14vh;
     }
   }
 
@@ -188,7 +192,7 @@
   }
 
   &.swipe-draw {
-    background: $gray;
+    background: $yellow;
 
     &:after {
       content: attr(data-draw);
@@ -196,7 +200,7 @@
   }
 
   &.swipe-skip {
-    background: $yellow;
+    background: $gray;
 
     &:after {
       content: attr(data-skip);

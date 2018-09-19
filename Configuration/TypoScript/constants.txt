@@ -1,4 +1,3 @@
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:themes_gridelements/Configuration/TypoScript/constants.txt">
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_kom/Configuration/TypoScript/Library/" extensions="constantsts">
 
 [userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('fluid_styled_content')]
