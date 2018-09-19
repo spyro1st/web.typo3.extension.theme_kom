@@ -48,10 +48,10 @@ $(document).ready(function () {
 		$('#theses-detail-' + currentIndex).addClass('active');
 	});
 
-	if ($('.thesis-balloon').hammer().length > 0) {
-		$('.thesis-balloon').hammer().data('hammer').get('pan').set({direction: Hammer.DIRECTION_ALL});
+	if ($('.thesis-balloon').not('.thesis-carousel').hammer().length > 0) {
+		$('.thesis-balloon').not('.thesis-carousel').hammer().data('hammer').get('pan').set({direction: Hammer.DIRECTION_ALL});
 	}
-	$('.thesis-balloon').hammer().on("pan", function (event) {
+	$('.thesis-balloon').not('.thesis-carousel').hammer().on("pan", function (event) {
 		if (event.gesture.deltaX === 0) return;
 		if (event.gesture.center.x === 0 && event.gesture.center.y === 0) {
 			return;
@@ -70,12 +70,12 @@ $(document).ready(function () {
 		if (event.gesture.deltaY > 50) {
 			$(event.target).removeClass(function (index, className) {
 				return (className.match(/swipe-.*/g) || []).join(' ');
-			}).addClass('swipe-draw');
+			}).addClass('swipe-skip');
 		}
 		if (event.gesture.deltaY < -50) {
 			$(event.target).removeClass(function (index, className) {
 				return (className.match(/swipe-.*/g) || []).join(' ');
-			}).addClass('swipe-skip');
+			}).addClass('swipe-draw');
 		}
 
 		var xMulti = event.gesture.deltaX * 0.03;
@@ -85,20 +85,20 @@ $(document).ready(function () {
 		event.target.style.transform = 'translate(' + event.gesture.deltaX + 'px, ' + event.gesture.deltaY + 'px) rotate(' + rotate + 'deg)';
 	});
 
-	$('.thesis-balloon').on('panend', function (event) {
+	$('.thesis-balloon').not('.thesis-carousel').on('panend', function (event) {
 
 		var moveOutWidth = document.body.clientWidth;
 		var keep = true;
 		if (Math.abs(event.gesture.deltaX) > 80) {
-			if (Math.abs(event.gesture.velocityX) > 0.4) {
+			// if (Math.abs(event.gesture.velocityX) > 0.4) {
 				keep = false;
-			}
+			// }
 		}
 
 		if (Math.abs(event.gesture.deltaY) > 80) {
-			if (Math.abs(event.gesture.velocityY) > 0.4) {
+			// if (Math.abs(event.gesture.velocityY) > 0.4) {
 				keep = false;
-			}
+			// }
 		}
 
 		if (keep) {
@@ -146,7 +146,7 @@ $(document).ready(function () {
 		$('.thesis-balloon').addClass('swipe-draw').delay(100)
 			.queue(function (next) {
 				$(this).css('transition', 'transform .3s ease-in-out');
-				$(this).css('transform', 'translate(-100px, ' + moveOutHeight + 'px) rotate(-10deg)');
+				$(this).css('transform', 'translate(-100px, -' + moveOutHeight + 'px) rotate(-10deg)');
 				next();
 			});
 	});
@@ -155,7 +155,7 @@ $(document).ready(function () {
 		$('.thesis-balloon').addClass('swipe-skip').delay(100)
 			.queue(function (next) {
 				$(this).css('transition', 'transform .3s ease-in-out');
-				$(this).css('transform', 'translate(-100px, -' + moveOutHeight + 'px) rotate(-10deg)');
+				$(this).css('transform', 'translate(-100px, ' + moveOutHeight + 'px) rotate(-10deg)');
 				next();
 			});
 	});

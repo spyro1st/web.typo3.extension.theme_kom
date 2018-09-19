@@ -147,7 +147,7 @@
 
   @include media-breakpoint-up(lg) {
     .content {
-      height: 25vh;
+      height: 14vh;
     }
   }
 
@@ -188,7 +188,7 @@
   }
 
   &.swipe-draw {
-    background: $gray;
+    background: $yellow;
 
     &:after {
       content: attr(data-draw);
@@ -196,7 +196,7 @@
   }
 
   &.swipe-skip {
-    background: $yellow;
+    background: $gray;
 
     &:after {
       content: attr(data-skip);

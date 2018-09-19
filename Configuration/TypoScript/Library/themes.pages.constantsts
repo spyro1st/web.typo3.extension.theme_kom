@@ -2,15 +2,3 @@
 
 # cat=pages,advanced//; type=int+; label= Startsite page uid
 themes.configuration.pages.startsite = 1
-
-# cat=pages,advanced//; type=int+; label= Page for the FAQ
-themes.configuration.pages.faq = 5
-
-# cat=pages,advanced//; type=int+; label= Imprint page
-themes.configuration.pages.imprint = 6
-
-# cat=pages,advanced//; type=int+; label= Privacy policy page
-themes.configuration.pages.privacy = 0
-
-# cat=pages,advanced//; type=int+; label= Cookie confirmation page
-themes.configuration.pages.cookie = 0

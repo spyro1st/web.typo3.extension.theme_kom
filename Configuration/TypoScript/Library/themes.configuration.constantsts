@@ -1,0 +1,2 @@
+# cat=pages//; type=int+; label= Page for the footer menu
+themes.configuration.menu.footer.Pid = 9
