@@ -3,6 +3,10 @@ select {
   -webkit-appearance: none;
 }
 
+select::-ms-expand {
+  display: none;
+}
+
 .select-wrap {
   position: relative;
 

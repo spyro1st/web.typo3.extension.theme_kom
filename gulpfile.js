@@ -47,7 +47,6 @@ gulp.task('sass', function () {
 	gulp.src('./Resources/Private/Sass/styles.scss')
 		.pipe(plumber(plumberErrorHandler))
 		.pipe(plugins.sass(options.sass).on('error', plugins.sass.logError))
-		.pipe(plugins.autoprefixer(options.autoprefixer))
 		.pipe(gulp.dest('./Resources/Public/Stylesheets/'))
 		.pipe(gulpFilter('**/*.css'))
 		.pipe(plugins.livereload());
@@ -72,6 +71,7 @@ gulp.task('scripts', function () {
 		'./Resources/Private/Vendor/tether/dist/js/tether.js',
 		'./Resources/Private/Vendor/bootstrap/dist/js/bootstrap.js',
 		'./Resources/Private/Vendor/viewport-units-buggyfill/viewport-units-buggyfill.js',
+		'./Resources/Private/Vendor/flexibility/flexibility.js',
 		'./Resources/Private/Vendor/hammer.js/hammer.js',
 		'./Resources/Private/Vendor/jquery-hammerjs/jquery.hammer.js',
 		'./Resources/Public/JavaScripts/KandidatOMat.js'

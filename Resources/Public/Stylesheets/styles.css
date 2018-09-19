@@ -8065,6 +8065,10 @@ a.text-gray-dark:hover {
   text-align: right;
 }
 
+.navbar {
+  flex: 0 0 auto;
+}
+
 .navbar.bg-primary {
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.4);
 }
@@ -8080,6 +8084,10 @@ a.text-gray-dark:hover {
   }
 }
 
+.navbar .container {
+  flex: 0 0 auto;
+}
+
 .navbar-brand {
   margin-right: 0;
   font-weight: 300;
@@ -8092,6 +8100,10 @@ a.text-gray-dark:hover {
 select {
   -moz-appearance: none;
   -webkit-appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
 }
 
 .select-wrap {
@@ -8268,14 +8280,18 @@ button:hover {
   }
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   display: flex;
-  min-height: 100vh;
   flex-direction: column;
 }
 
-.content__main--wrapper {
-  flex: 1;
+.content__main--wrapper,
+.content__extension--wrapper {
+  flex: 1 0 auto;
 }
 
 .footer-main {
@@ -8313,7 +8329,7 @@ body {
 
 .layout-start .content__main--wrapper {
   display: flex;
-  flex: 1;
+  flex: 1 0 auto;
   align-items: center;
   color: #ffffff;
 }
@@ -8328,14 +8344,12 @@ body {
   margin-bottom: 0;
 }
 
-.content__extension--wrapper {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-}
-
 .content__extension--wrapper .content__main {
   padding-bottom: 5rem;
+}
+
+.tx-kom {
+  flex: 0 0 auto;
 }
 
 .flaticon-arrow-reverse:before {
@@ -8395,7 +8409,7 @@ body {
 @media (min-width: 768px) {
   .thesis-balloon-wrap {
     margin-top: calc(25px + 6rem);
-    margin-bottom: calc(25px + 6rem);
+    margin-bottom: calc(25px + 3rem);
   }
 }
 

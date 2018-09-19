@@ -5,6 +5,7 @@ $(document).ready(function () {
 
 
 	window.viewportUnitsBuggyfill.init();
+	flexibility(document.documentElement);
 
 	$(document).on('hidden', "#global-modal", function () {
 		$("#global-modal").removeData("modal");

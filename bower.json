@@ -16,10 +16,11 @@
 		"tests"
 	],
 	"devDependencies": {
-		"bootstrap": "4.0.0",
+		"bootstrap": "4.0.0-alpha.6",
 		"hammer.js": "2.0.8",
 		"jquery-hammerjs": "2.0.0",
-		"viewport-units-buggyfill": "0.6.1"
+		"viewport-units-buggyfill": "0.6.1",
+		"flexibility": "2.0.1"
 	},
 	"dependencies": {}
 }

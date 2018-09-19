@@ -1,3 +1,7 @@
+.tx-kom {
+  flex: 0 0 auto;
+}
+
 .flaticon-arrow-reverse:before {
   transform: rotate(180deg);
 }
@@ -57,7 +61,7 @@
 
   @include media-breakpoint-up(md) {
     margin-top: calc(25px + #{$spacer-y * 6});
-    margin-bottom: calc(25px + #{$spacer-y * 6});
+    margin-bottom: calc(25px + #{$spacer-y * 3});
   }
 }
 
