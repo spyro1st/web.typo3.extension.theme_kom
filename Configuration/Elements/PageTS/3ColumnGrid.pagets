@@ -1,7 +1,6 @@
 tx_gridelements.setup.3ColumnGrid {
 	title = LLL:EXT:theme_kom/Resources/Private/Language/Elements.xlf:three_column_grid
 	description = LLL:EXT:theme_kom/Resources/Private/Language/Elements.xlf:three_column_grid_description
-	flexformDS = FILE:EXT:theme_kom/Configuration/Elements/FlexForms/3ColumnGrid.xml
 	icon = ../typo3conf/ext/theme_kom/Resources/Public/Icons/GridElements/new_content_el_3_Column.gif
 	config {
 		colCount = 3

@@ -268,6 +268,64 @@ themes {
 					}
 				}
 
+				6ColumnGrid {
+					extralarge {
+						column-width {
+							2-2-2-2-2-2 = 2:2:2:2:2:2
+							4-4-4-4-4-4 = 4:4:4:4:4:4
+							12-12-12-12-12-12 = 12:12:12:12:12:12
+						}
+						column-equal-height {
+							true = Column: equal height
+							false = Column: no equal height
+						}
+					}
+					large {
+						column-width {
+							2-2-2-2-2-2 = 2:2:2:2:2:2
+							4-4-4-4-4-4 = 4:4:4:4:4:4
+							12-12-12-12-12-12 = 12:12:12:12:12:12
+						}
+						column-equal-height {
+							true = Column: equal height
+							false = Column: no equal height
+						}
+					}
+					medium {
+						column-width {
+							2-2-2-2-2-2 = 2:2:2:2:2:2
+							4-4-4-4-4-4 = 4:4:4:4:4:4
+							12-12-12-12-12-12 = 12:12:12:12:12:12
+						}
+						column-equal-height {
+							true = Column: equal height
+							false = Column: no equal height
+						}
+					}
+					small {
+						column-width {
+							2-2-2-2-2-2 = 2:2:2:2:2:2
+							4-4-4-4-4-4 = 4:4:4:4:4:4
+							12-12-12-12-12-12 = 12:12:12:12:12:12
+						}
+						column-equal-height {
+							true = Column: equal height
+							false = Column: no equal height
+						}
+					}
+					extrasmall {
+						column-width {
+							2-2-2-2-2-2 = 2:2:2:2:2:2
+							4-4-4-4-4-4 = 4:4:4:4:4:4
+							12-12-12-12-12-12 = 12:12:12:12:12:12
+						}
+						column-equal-height {
+							true = Column: equal height
+							false = Column: no equal height
+						}
+					}
+				}
+
 				Row {
 					extralarge {
 

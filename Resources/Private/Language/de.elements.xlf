@@ -30,6 +30,15 @@
                 <target>Vorbelegte Zeile mit vier Spalten. Die Spaltenbreiten sind einstellbar. Alle Spalten haben zusammen immer eine Breite von 12 Rasterspalten</target>
             </trans-unit>
 
+			<trans-unit id="six_column_grid">
+				<source>6 column grid</source>
+				<target>6 spaltiges Raster</target>
+			</trans-unit>
+			<trans-unit id="six_column_grid_description">
+				<source>Preset row with six columns. Column width can be adjusted. Columns will always have an overall width of 12 grid columns.</source>
+				<target>Vorbelegte Zeile mit sechs Spalten. Die Spaltenbreiten sind einstellbar. Alle Spalten haben zusammen immer eine Breite von 12 Rasterspalten</target>
+			</trans-unit>
+
             <trans-unit id="outer_left">
                 <source>Outer left</source>
                 <target>Links aussen</target>

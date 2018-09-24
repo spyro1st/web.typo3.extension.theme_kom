@@ -1,3 +1,7 @@
+.invisible {
+  display: none;
+}
+
 .tx-kom {
   flex: 0 0 auto;
 }
@@ -131,6 +135,7 @@
 .thesis-balloon-inactive {
   position: relative;
   z-index: 999;
+  width: 100%;
   padding: ($spacer-y) ($spacer-x);
   margin: $spacer-y / 2 0;
   background: $white;
@@ -274,7 +279,7 @@
 
 .emphasize-toggle-wrap {
   @include media-breakpoint-down(md) {
-    margin-top: calc(25px + #{$spacer-y});
+    margin-top: calc(25px);
   }
 
   cursor: pointer;

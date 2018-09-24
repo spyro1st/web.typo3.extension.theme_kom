@@ -24,6 +24,13 @@
                 <source>Preset row with four columns. Column width can be adjusted. Columns will always have an overall width of 12 grid columns.</source>
             </trans-unit>
 
+			<trans-unit id="six_column_grid">
+				<source>6 column grid</source>
+			</trans-unit>
+			<trans-unit id="six_column_grid_description">
+				<source>Preset row with six columns. Column width can be adjusted. Columns will always have an overall width of 12 grid columns.</source>
+			</trans-unit>
+
             <trans-unit id="outer_left">
                 <source>Outer left</source>
             </trans-unit>
