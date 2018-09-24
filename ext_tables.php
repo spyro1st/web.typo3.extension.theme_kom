@@ -9,7 +9,7 @@ if (TYPO3_MODE === 'BE') {
         'Configuration/TypoScript',
         'Kanditat-O-Mat Theme');
 
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-        '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/PageTS/tsconfig.txt">'
-    );
+//    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+//        '<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/PageTS/tsconfig.txt">'
+//    );
 };
